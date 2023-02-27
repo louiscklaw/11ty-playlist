@@ -3,6 +3,7 @@
 set -ex
 
 git pull
+
 docker compose -f docker/docker-compose.prod.yml pull
 docker compose -f docker/docker-compose.prod.yml build
 
