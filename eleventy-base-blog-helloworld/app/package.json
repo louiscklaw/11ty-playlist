@@ -9,7 +9,7 @@
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
     "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "prettier_format": "prettier --write **/*.js **/*.css **/*.md",
+    "prettier_format": "prettier --write **/*.js **/*.css **/*.md  **/*.njk",
     "gitUpdate": "git add . && git commit -m \"update fedora,\" && git pull && git push",
     "production": "cd _site && npx http-serve .",
     "into_docker": "docker compose exec -it test bash"

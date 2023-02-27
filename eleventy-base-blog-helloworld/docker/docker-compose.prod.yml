@@ -14,14 +14,14 @@ services:
 
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.showcase-http.rule=Host(`showcase.iamon99.com`)'
-      - 'traefik.http.routers.showcase-http.entrypoints=web'
-      - 'traefik.http.routers.showcase-http.middlewares=showcase-https'
-      - 'traefik.http.middlewares.showcase-https.redirectscheme.scheme=https'
-      - 'traefik.http.routers.showcase.rule=Host(`showcase.iamon99.com`)'
-      - 'traefik.http.routers.showcase.entrypoints=websecure'
-      - 'traefik.http.routers.showcase.tls.certresolver=myresolver'
-      - 'traefik.http.services.showcase.loadbalancer.server.port=8080'
+      - 'traefik.http.routers.11tyhelloworld-http.rule=Host(`11tyhelloworld.iamon99.com`)'
+      - 'traefik.http.routers.11tyhelloworld-http.entrypoints=web'
+      - 'traefik.http.routers.11tyhelloworld-http.middlewares=11tyhelloworld-https'
+      - 'traefik.http.middlewares.11tyhelloworld-https.redirectscheme.scheme=https'
+      - 'traefik.http.routers.11tyhelloworld.rule=Host(`11tyhelloworld.iamon99.com`)'
+      - 'traefik.http.routers.11tyhelloworld.entrypoints=websecure'
+      - 'traefik.http.routers.11tyhelloworld.tls.certresolver=myresolver'
+      - 'traefik.http.services.11tyhelloworld.loadbalancer.server.port=8080'
 
 networks:
   default:

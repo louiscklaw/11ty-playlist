@@ -14,5 +14,12 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "overrides": []
+  "overrides": [
+    {
+      "files": ["*.njk"],
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
 }
