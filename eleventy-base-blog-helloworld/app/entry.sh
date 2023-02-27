@@ -3,5 +3,7 @@ set -ex
 
 npm i
 
+npm run build
+
 pushd _site
 	npx http-serve .
