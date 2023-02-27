@@ -27,3 +27,6 @@ networks:
   default:
     external:
       name: traefik-proxy-network
+
+volumes:
+  node_modules:
