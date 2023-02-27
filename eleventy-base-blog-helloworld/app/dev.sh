@@ -2,6 +2,4 @@
 set -ex
 
 npm i
-
-pushd _site
-	npx http-serve .
+npm run start
