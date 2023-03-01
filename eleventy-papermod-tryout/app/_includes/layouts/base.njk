@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{{ description or metadata.description }}">
+
+		<title>{{ title or metadata.title }}</title>
+
+		{#- Atom and JSON feeds included by default #}
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
+
+		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+
+		{#-
+		CSS bundles are provided via the `eleventy-plugin-bundle` plugin:
+		1. You can add to them using `{% css %}`
+		2. You can get from them using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
+		3. You can do the same for JS: {% js %}{% endjs %} and <script>{% getBundle "js" %}</script>
+		4. Learn more: https://github.com/11ty/eleventy-plugin-bundle
+		#}
+
+		{#- Add an arbitrary string to the bundle #}
+		{%- css %}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+		{% endcss %}
+		{#- Add the contents of a file to the bundle #}
+		{%- css %}
+			{% include "public/css/index.css" %}
+		{% endcss %}
+		{#- Or add from node_modules #}
+		{#
+			{%- css %}
+				{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+			{% endcss %}
+		#}
+
+		{#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+		<style>{% getBundle "css" %}</style>
+
+		<link rel="stylesheet" href="/css/tailwind.css" >
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	</head>
+	<body class="bg-background">
+
+    <div class="mx-4">
+      <div class="flex flex-wrap
+        {# bg-blue
+        sm:bg-red
+        md:bg-gold
+        lg:bg-cyan
+        xl:bg-green
+        2xl:bg-pink #}
+
+        h-32
+        md:h-16
+
+        md:justify-center md:content-center
+        " >
+        <div class="basis-full md:basis-1/2 flex flex-auto gap-x-4 flex items-center" >
+          <div class="flex gap-4">
+            <div class="prose" style="font-size: 0.6rem"><h1>PaperMod</h1></div>
+            <div>|</div>
+            <div>🇫🇷</div><div>Fa</div>
+          </div>
+        </div>
+        <div class="basis-full md:basis-1/2
+        flex
+        items-center
+        " >
+          <div class="flex gap-4
+          {# bg-gold #}
+          ">
+            <div>Archive</div>
+            <div>Search</div>
+            <div>Tags</div>
+            <div>Discord</div>
+            <div>WiKi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<main >
+			{{ content | safe }}
+		</main>
+
+    <footer>
+      <div class="flex flex-wrap justify-center pt-4 pb-8"
+      style="background-color: #bdc3c7">
+        <div class="basis-full text-xs flex justify-center my-1 lg:my-4">
+          © 2020 - 2023 louiscklaw
+        </div>
+        <div class="basis-full text-xs flex justify-center my-1 lg:my-4">
+          RSS Feed
+        </div>
+        <div class="basis-full text-xs flex justify-center my-1 lg:my-4">
+          Powered by Louis & PaperMod
+        </div>
+      </div>
+    </footer>
+
+		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+	</body>
+</html>
