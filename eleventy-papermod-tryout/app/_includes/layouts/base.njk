@@ -7,6 +7,8 @@
 
     <title>{{ title or metadata.title }}</title>
 
+    {% include './google-fonts.njk' %}}
+
     {#- Atom and JSON feeds included by default #}
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}" />
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}" />
@@ -25,14 +27,8 @@
       4. Learn more: https://github.com/11ty/eleventy-plugin-bundle #}
 
     {#- Add an arbitrary string to the bundle #}
-    {%- css %}
-      * {
-      font-family: 'Noto Sans TC', sans-serif;
-      padding: 0; margin: 0; box-sizing: border-box;
-      background-color: gold
-      }
-    {% endcss %}
 
+    {%include "./base-style.njk"%}
 
     {#- Add the contents of a file to the bundle #}
     {%- css %}
