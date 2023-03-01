@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/louiscklaw/eleventy-playlist/issues"
   },
-  "homepage": "https://github.com/louiscklaw/eleventy-playlist#readme"
+  "homepage": "https://github.com/louiscklaw/eleventy-playlist#readme",
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
 }
