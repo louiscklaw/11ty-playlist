@@ -7,7 +7,7 @@
 
     <title>{{ title or metadata.title }}</title>
 
-    {% include './google-fonts.njk' %}}
+    {% include './google-fonts.njk' %}
 
     {#- Atom and JSON feeds included by default #}
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}" />
@@ -25,8 +25,6 @@
           {% getBundle "js" %}
         </script>
       4. Learn more: https://github.com/11ty/eleventy-plugin-bundle #}
-
-    {#- Add an arbitrary string to the bundle #}
 
     {%include "./base-style.njk"%}
 
@@ -47,14 +45,6 @@
     <style>
       {% getBundle "css" %}
     </style>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     {% include "./thirdPartyLibrary.njk" %}
   </head>
@@ -86,14 +76,7 @@
 
     <main> {{ content | safe }} </main>
 
-    {# {% include "./thirdPartyLibrary.njk" %} #}
-
     <!-- Current page: {{ page.url | htmlBaseUrl }} -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
-      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    {%include './thirdPartyLibraryFooter.njk'%}
   </body>
 </html>
