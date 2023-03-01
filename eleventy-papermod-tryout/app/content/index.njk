@@ -15,7 +15,11 @@ numberOfLatestPostsToShow: 3
   Github ! PaperMod is based on theme <a href="//www.google.com">Paper</a>.
 </div>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount %}
-{% include "postslist.njk" %} {% set morePosts = postsCount - numberOfLatestPostsToShow %} {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+
+{% if morePosts > 0 %} <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+
 {% endif %}
