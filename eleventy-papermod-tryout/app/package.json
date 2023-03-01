@@ -5,7 +5,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
-    "build:styles": "npx tailwindcss -i ./src/input.css -o ./_site/css/tailwind.css",
+    "build:styles": "npx tailwindcss -i ./src/input.css -o ./public/css/tailwind.css",
     "watch:files": "npx @11ty/eleventy --serve --quiet",
     "watch:styles": "npm run build:styles -- --watch",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
