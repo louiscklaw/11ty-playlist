@@ -1,5 +1,4 @@
 <div class="py-4">
-
   {% for post in postslist | reverse %}
   <a href="{{post.url}}">
     <div class="my-4 p-4 rounded-2xl bg-white prose">
@@ -7,7 +6,6 @@
       <div class="content mt-2">Read Install and Update instructions here</div>
       <div class="footer mt-2">{{ post.date | htmlDateString }} · {{ 'text' | timeToRead }}</div>
     </div>
-    </a>
+  </a>
   {% endfor %}
-
 </div>

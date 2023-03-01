@@ -16,7 +16,7 @@
   "useTabs": false,
   "overrides": [
     {
-      "files": ["**/*.njk"],
+      "files": ["./**/*.njk"],
       "options": { "parser": "html" }
     }
   ]

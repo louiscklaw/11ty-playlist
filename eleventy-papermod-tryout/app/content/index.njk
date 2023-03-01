@@ -7,21 +7,15 @@ numberOfLatestPostsToShow: 3
 ---
 
 <div class="prose">
-
   <h1>PaperMod</h1>
 
   Welcome to demo of hugo’s theme PaperMod.<br />
 
-  <b>PaperMod</b> is a simple but fast and responsive theme with useful feature-set that enhances UX.
-  Do give a 🌟 on Github !
-  PaperMod is based on theme <a href="//www.google.com">Paper</a>.
-
+  <b>PaperMod</b> is a simple but fast and responsive theme with useful feature-set that enhances UX. Do give a 🌟 on
+  Github ! PaperMod is based on theme <a href="//www.google.com">Paper</a>.
 </div>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-  <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount %}
+{% include "postslist.njk" %} {% set morePosts = postsCount - numberOfLatestPostsToShow %} {% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
 {% endif %}
