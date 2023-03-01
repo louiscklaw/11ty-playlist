@@ -5,20 +5,23 @@ eleventyNavigation:
   order: 3
 ---
 
-<div class="pb-4" style="min-height: calc(100vh - 8rem - 8rem)">
-  <section>
-    <div class="flex flex-row justify-center gap-4">
+<div class="pb-4 flex flex-col justify-center" style="min-height: calc(100vh - 8rem - 8rem)">
+  <section class="flex flex-col gap-4 justify-between">
+    <div class="flex flex-row justify-center gap-6">
       <div class="avatar">
         <div class="w-32 rounded-full">
           <img src="https://avatars.githubusercontent.com/u/1376093?v=4" />
         </div>
       </div>
 
-      <div class="qr-canvas-main-page-container w-32" style="background-color: gold">
+      <div class="border border-l-gray-500/75"></div>
+
+      <div class="qr-canvas-main-page-container w-32">
         <div style="">
           <div id="qr-canvas-main-page"></div>
         </div>
       </div>
+
       {# <div style="background-color: gold; width: 128px; height: 128px"> </div> #}
     </div>
 

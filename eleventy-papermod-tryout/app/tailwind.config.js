@@ -13,6 +13,7 @@ module.exports = {
       purple: '#3f3cbb',
       midnight: '#121063',
       gray: colors.slate,
+      indigo: colors.slate,
       metal: '#565584',
       tahiti: {
         100: '#cffafe',

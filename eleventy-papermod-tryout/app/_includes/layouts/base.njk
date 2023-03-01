@@ -66,8 +66,10 @@
 
     <main class="mx-4"> {{ content | safe }} </main>
 
-    <footer class="h-32">
-      <div class="flex flex-wrap justify-center pt-4 pb-8" style="background-color: #bdc3c7">
+    {# {% include "./thirdPartyLibrary.njk" %} #}
+
+    <footer class="h-32 bg-background" style="position: fixed; bottom: 0px; width: 100%">
+      <div class="flex flex-wrap justify-center pt-4 pb-8">
         <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> © 2020 - 2023 louiscklaw </div>
         <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> RSS Feed </div>
         <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> Powered by Louis & PaperMod </div>
