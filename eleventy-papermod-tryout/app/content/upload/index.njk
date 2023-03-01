@@ -1,0 +1,26 @@
+---
+layout: layouts/full-screen-no-scroll.njk
+eleventyNavigation:
+  key: pay
+  order: 3
+---
+
+<div class="h-screen">
+  <div class="h-4/6 flex flex-col justify-center items-center">
+    <div class="flex flex-col gap-8 justify-center">
+      <i class="fa-4x fa-solid fa-forward"></i>
+      <div class="flex flex-col gap-4 justify-center">
+        <div>redirecting, please wait</div>
+        <div>redirecting 中, 請稍侯</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include '../fixed-footer.njk'%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    window.location = '//share.louislabs.com/upload';
+  });
+</script>
