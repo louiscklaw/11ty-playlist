@@ -1,32 +1,37 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: card
+  key: pay
   order: 3
 ---
 
-<div class="pb-4" style="min-height: calc(100vh - 8rem - 8rem)">
-  <section>
-    <div class="avatar">
-      <div class="w-24 rounded-full">
-        <img src="https://avatars.githubusercontent.com/u/1376093?v=4" />
-      </div>
-    </div>
-  </section>
+<div class="mx-4 pb-4 flex flex-col justify-center gap-8 prone" style="min-height: calc(100vh - 8rem - 8rem)">
+  <div class="flex flex-col">
+    <p class="flex justify-center text-2xl">真係非常多謝</p>
+    {#
 
-  <section>
-    {# prose #}
-    <div>QR code here </div>
-  </section>
+    <p class="flex justify-center text-md">thank you very much</p>
 
-  <section>
-    <h3>Hi, I am louis</h3>
-    <div> a validation engineer </div>
-    <div>social icons</div>
-  </section>
+    <p class="flex justify-center text-md">どうもありがとうございます</p>
 
-  <section>
-    <div>works</div>
-    <div>tags</div>
-  </section>
+    <p class="flex justify-center text-md">非常感謝您</p>
+
+    #}
+  </div>
+
+  <div class="p-6">
+    <img src="/img/hsbc.jpg" />
+  </div>
+
+  <div class="p-6">
+    <img src="/img/alipay.jpg" />
+  </div>
 </div>
+
+<footer class="h-32 bg-background" style="width: 100%">
+  <div class="flex flex-wrap justify-center pt-4 pb-8">
+    <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> © 2020 - 2023 louiscklaw </div>
+    <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> RSS Feed </div>
+    <div class="basis-full text-xs flex justify-center my-1 lg:my-4"> Powered by Louis & PaperMod </div>
+  </div>
+</footer>
