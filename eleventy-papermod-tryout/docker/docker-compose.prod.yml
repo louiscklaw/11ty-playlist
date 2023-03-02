@@ -13,14 +13,14 @@ services:
 
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.11tyhelloworld-http.rule=Host(`11tyhelloworld.iamon99.com`)'
-      - 'traefik.http.routers.11tyhelloworld-http.entrypoints=web'
-      - 'traefik.http.routers.11tyhelloworld-http.middlewares=11tyhelloworld-https'
-      - 'traefik.http.middlewares.11tyhelloworld-https.redirectscheme.scheme=https'
-      - 'traefik.http.routers.11tyhelloworld.rule=Host(`11tyhelloworld.iamon99.com`)'
-      - 'traefik.http.routers.11tyhelloworld.entrypoints=websecure'
-      - 'traefik.http.routers.11tyhelloworld.tls.certresolver=myresolver'
-      - 'traefik.http.services.11tyhelloworld.loadbalancer.server.port=8080'
+      - 'traefik.http.routers.portfolio-staging-http.rule=Host(`portfolio-staging.iamon99.com`)'
+      - 'traefik.http.routers.portfolio-staging-http.entrypoints=web'
+      - 'traefik.http.routers.portfolio-staging-http.middlewares=portfolio-staging-https'
+      - 'traefik.http.middlewares.portfolio-staging-https.redirectscheme.scheme=https'
+      - 'traefik.http.routers.portfolio-staging.rule=Host(`portfolio-staging.iamon99.com`)'
+      - 'traefik.http.routers.portfolio-staging.entrypoints=websecure'
+      - 'traefik.http.routers.portfolio-staging.tls.certresolver=myresolver'
+      - 'traefik.http.services.portfolio-staging.loadbalancer.server.port=8080'
 
 networks:
   default:
