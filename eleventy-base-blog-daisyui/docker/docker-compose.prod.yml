@@ -1,6 +1,6 @@
 # CREDIT: https://github.com/shren207/nextjs-docker-compose
 services:
-  test:
+  11tyhelloworld:
     build: .
     restart: always
     volumes:
