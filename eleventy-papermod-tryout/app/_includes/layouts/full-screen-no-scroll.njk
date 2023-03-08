@@ -7,9 +7,7 @@
 
     <title>{{ title or metadata.title }}</title>
 
-    {% include './google-fonts.njk' %}
-
-    {#- Atom and JSON feeds included by default #}
+    {% include './google-fonts.njk' %} {#- Atom and JSON feeds included by default #}
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}" />
     <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}" />
 
@@ -22,23 +20,10 @@
       {% getBundle "js" %}
     </script>
     4. Learn more: https://github.com/11ty/eleventy-plugin-bundle #} {#- Add an arbitrary string to the bundle #}
-
-    {%include "./base-style.njk"%}
-
-    {#- Add the contents of a file to the
-    bundle #}
-    {%- css %}
-      {% include "public/css/index.css" %}
-      {% include "public/css/tailwind.css" %}
-    {% endcss %}
-    {#- Or add from node_modules #}
-    {#
-    {%- css %}
-      {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
-    {% endcss %}
-    #}
-
-    {#- Render the CSS bundle using Inlined CSS (for the fastest site performance in production) #}
+    {%include "./base-style.njk"%} {#- Add the contents of a file to the bundle #} {%- css %} {% include
+    "public/css/index.css" %} {% include "public/css/tailwind.css" %} {% endcss %} {#- Or add from node_modules #} {#
+    {%- css %} {% include "node_modules/prismjs/themes/prism-okaidia.css" %} {% endcss %} #} {#- Render the CSS bundle
+    using Inlined CSS (for the fastest site performance in production) #}
 
     <style>
       {% getBundle "css" %}
