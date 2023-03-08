@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gitUpdate": "git add . && git commit -m \"update eleventy-base-blog-daisyui,\" && git pull && git push",
     "into_docker": "docker compose -f ./docker/docker-compose.dev.yml exec -it test bash",
-    "format": "npx prettier --loglevel warn --write \"**/*.njk\""
+    "format": "npx prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "prettier": "^2.8.4"
   }
 }
