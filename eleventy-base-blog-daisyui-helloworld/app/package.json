@@ -44,5 +44,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
     "luxon": "^3.2.1",
     "markdown-it-anchor": "^8.6.6"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.3"
   }
 }
