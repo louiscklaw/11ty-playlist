@@ -42,7 +42,14 @@
 		<style>{% getBundle "css" %}</style>
 
 		<meta name="google-site-verification" content="go0904i1ILUz_g0MtA2-eR1Gxco9GfqVbyeTbik344E" />
+
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		{# https://tailwindcss.com/docs/installation/play-cdn #}
+		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 	</head>
+
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
@@ -66,7 +73,7 @@
 			{{ content | safe }}
 		</main>
 
-		<footer></footer>
+		{% include './footer.njk' %}
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 	</body>
