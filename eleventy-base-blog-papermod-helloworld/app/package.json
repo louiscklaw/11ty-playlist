@@ -13,7 +13,7 @@
     "gitUpdate": "git add . && git commit -m \"update fedora,\" && git push",
     "production": "cd _site && npx http-serve .",
     "dev": "concurrently -k \"npm:build_sass\" \"npm:start\"",
-    "build_sass": "sass --watch scss/input.scss public/css/custome.css",
+    "build_sass": "sass --watch scss/input.scss public/css/custom.css",
     "into_docker": "docker compose exec -it test bash"
   },
   "repository": {
