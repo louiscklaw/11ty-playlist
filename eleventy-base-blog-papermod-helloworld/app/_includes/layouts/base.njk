@@ -48,6 +48,9 @@
 
 		{# https://tailwindcss.com/docs/installation/play-cdn #}
 		<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+		{% include './imports_head.njk' %}
+
 	</head>
 
 	<body>
@@ -62,5 +65,8 @@
 		{% include './footer.njk' %}
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
+
+		{# {% include './fontawesome_test.njk' %} #}
+		{% include './imports_foot.njk' %}
 	</body>
 </html>

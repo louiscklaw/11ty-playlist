@@ -12,7 +12,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.6.0",
-    "sass": "^1.58.3"
+    "prettier": "^2.8.4"
   }
 }
