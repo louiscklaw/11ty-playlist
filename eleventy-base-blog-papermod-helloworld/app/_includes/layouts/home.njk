@@ -1,19 +1,29 @@
 ---
 layout: layouts/base.njk
 ---
-<!-- Delete this message, it will also remove the component CSS from the bundle -->
-{%- css %}
-	{% include "public/css/message-box.css" %}
-{% endcss %}
 
-<div class="message-box">
-	<ol>
-		<li>Edit the <code>_data/metadata.js</code> with your blog’s information.</li>
-		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
-	</ol>
-	<p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
+<div class="
+  prose
+  prose-h1:text-3xl
+  prose-h1:font-bold
+  prose-h1:no-underline
+  prose-h1:my-4
+  prose-img:rounded-xl
+  prose-headings:underline
+  prose-a:text-blue-600
+  " >
+  <h1 class="text-">PaperMod</h1>
+
+  <p>
+    Welcome to demo of hugo’s theme PaperMod.<br />
+
+    PaperMod is a simple but fast and responsive theme with useful feature-set that enhances UX.<br />
+
+    Do give a 🌟 on Github !<br />
+
+    PaperMod is based on theme Paper.
+  </p>
+
+  {{ content | safe }}
+
 </div>
-<!-- Stop deleting -->
-
-{{ content | safe }}

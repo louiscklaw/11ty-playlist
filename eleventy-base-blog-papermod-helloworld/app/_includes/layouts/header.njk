@@ -1,15 +1,16 @@
 <header>
   <div class="flex flex-row flex-wrap content-center">
-    <div class="basis-full lg:basis-1/2 flex flex-row content-center" >
-      <div class="basis-1/2" style="font-size: 24px; font-weight: 700;">
+    <div class="basis-full lg:basis-1/2 flex flex-row gap-2 content-center" >
+      <div class="basis" style="font-size: 24px; font-weight: 700;">
         <a href="/" class="home-link">
           <h1>{{ metadata.title }}</h1>
         </a>
       </div>
-      <div class="basis-1/2 flex flex-row gap-1">
-        <div class="grid content-center">    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="basis flex flex-row gap-1">
+        <div class="grid content-center">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
+          </svg>
         </div>
         <div class="grid content-center">|</div>
         <div class="grid content-center">
@@ -28,12 +29,17 @@
     <div class="basis-full lg:basis-1/2">
       <nav>
         <h2 class="visually-hidden">Top level navigation menu</h2>
-        <ul class="flex flex-row flex-wrap">
-          <li class="basis-1/5">Archive</li>
-          <li class="basis-1/5">Search</li>
-          <li class="basis-1/5">Tags</li>
-          <li class="basis-1/5">Discord</li>
-          <li class="basis-1/5">Discord</li>
+        <ul class="flex flex-row flex-wrap gap-4">
+          <li class="py-4 text-base">Archive</li>
+          <li class="py-4 text-base">Search</li>
+          <li class="py-4 text-base">Tags</li>
+          <li class="py-4 text-base">Discord</li>
+          <li class="py-4 flex gap-1 text-base">
+            new window
+            <div>
+              <i class="fa-solid fa-up-right-from-square text-xs"></i>
+              </div>
+          </li>
         </ul>
       </nav>
     </div>
