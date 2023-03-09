@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'Eleventy Base Blog v8',
+  title: 'PaperMod tryout',
   url: 'https://11tyhelloworld.iamon99.com/',
   language: 'en',
-  description: 'I am writing about my experiences as a naval navel-gazer.',
+  description: 'I am writing to try making a papermod theme using 11ty and tailwindcss.',
   author: {
     name: 'louiscklaw',
     email: 'youremailaddress@11tyhelloworld.iamon99.com',
