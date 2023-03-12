@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitUpdate": "git add . && git commit -m'update,' && git push",
-    "prettier_format": "prettier --write **/*.js **/*.css **/*.md"
+    "gitUpdate": "git add . && git commit -m'update eleventy-base-blog-papermod-helloworld,' && git push"
   },
   "repository": {
     "type": "git",
