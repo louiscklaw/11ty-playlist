@@ -2,8 +2,6 @@
 
 set -ex
 
-git pull
-
 ./scripts/stop_dev.sh
 sleep 1
 
