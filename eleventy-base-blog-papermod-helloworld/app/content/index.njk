@@ -15,6 +15,7 @@ numberOfLatestPostsToShow: 3
 {% set postslistCounter = postsCount %}
 
 {% include "postslist.njk" %}
+
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
   <p>
