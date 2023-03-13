@@ -2,106 +2,35 @@
 layout: layouts/base.njk
 ---
 
-{% include './toc.njk' %}
-
 {%- css %}
   /* Only include the syntax highlighter CSS on blog posts */
   {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
   {% include "public/css/prism-diff.css" %}
 {%- endcss %}
 
-<div class="
-  prose
-  prose-h3:leading-none
-  prose-h3:font-bold
-  prose-li:pl-0
-  prose-code:bg-slate-200
-  prose-code:rounded
-  prose-img:my-0
-  prose-p:before:content-['']
-  prose-img:rounded
-  ">
+<article style="min-height: 50vh;">
+  {% include 'components/toc.njk' %}
 
-  <h1 class="m-0">
-    {{ title }}
-  </h1>
+  <div class="
+    prose
+    prose-h3:leading-none
+    prose-h3:font-bold
+    prose-li:pl-0
+    prose-code:bg-slate-200
+    prose-code:rounded
+    prose-img:my-0
+    prose-p:before:content-['']
+    prose-img:rounded
+    ">
 
-  <div class="text-sm flex flex-wrap gap-1 mt-2">
-    <ul class="
-      m-0
-      list-inside list-none
-      flex flex-wrap
-      not-prose
-      pl-0
-      gap-1
-      ">
-      <li>
-        <time datetime="{{ page.date | htmlDateString }}">
-          {{ page.date | readableDate }}
-        </time>
-      </li>
-      <li>
-        · 3 min
-      </li>
-      <li>
-        · Louis
-      </li>
+    {% include 'components/title.njk' %}
+    {% include 'components/post_meta.njk' %}
 
-
-      {%- for tag in tags | filterTagList %}
-        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-        <li>
-          <a href="{{ tagUrl }}" >{{ tag }}</a>{%- if not loop.last %}, {% endif %}
-        </li>
-      {%- endfor %}
-    </ul>
-    <div>|</div>
-    <div>
-      <a href="#" class="font-bold">Suggest Changes</a>
+    <div class="prose-ul:pl-4">
+      {{ content | safe }}
     </div>
+
   </div>
+</article>
 
-  <div class="prose-ul:pl-4">
-    {{ content | safe }}
-  </div>
-
-  {%- if collections.posts %}
-    {%- set previousPost = collections.posts | getPreviousCollectionItem %}
-    {%- set nextPost = collections.posts | getNextCollectionItem %}
-    {%- if nextPost or previousPost %}
-      <div class="p-4 mt-4
-          rounded-xl
-          bg-slate-100
-          prose
-          prose-p:mb-0
-          prose-h2:mb-2
-        ">
-        <ul class="not-prose pl-0 list-none list-outside flex gap-4">
-          {%- if previousPost %}
-            <li class="list-outside">
-              <a href="{{ previousPost.url }}" class="font-bold">
-                  <div class="text-slate-500">
-                    <i class="fa-solid fa-angles-left fa-xs"></i>
-                    <span class="text-sm uppercase ">Previous</span>
-                  </div>
-                  {{ previousPost.data.title }}
-              </a>
-            </li>
-          {% endif %}
-          {%- if nextPost %}
-            <li class="list-outside flex text-right">
-              <a href="{{ nextPost.url }}" class="font-bold">
-                  <div class="text-slate-500">
-                    <span class="text-sm uppercase ">Next</span>
-                    <i class="fa-solid fa-angles-right fa-xs"></i>
-                  </div>
-                  {{ nextPost.data.title }}
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-    {%- endif %}
-  {%- endif %}
-
-</div>
+{% include 'components/bottom_nav.njk' %}

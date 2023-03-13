@@ -1,0 +1,38 @@
+  {%- if collections.posts %}
+    {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+    {%- set nextPost = collections.posts | getNextCollectionItem %}
+    {%- if nextPost or previousPost %}
+      <div class="p-4 mt-4
+          rounded-xl
+          bg-slate-100
+          prose
+          prose-p:mb-0
+          prose-h2:mb-2
+        ">
+        <ul class="not-prose pl-0 list-none list-outside flex gap-4">
+          {%- if previousPost %}
+            <li class="list-outside">
+              <a href="{{ previousPost.url }}" class="font-bold">
+                  <div class="text-slate-500">
+                    <i class="fa-solid fa-angles-left fa-xs"></i>
+                    <span class="text-sm uppercase ">Previous</span>
+                  </div>
+                  {{ previousPost.data.title }}
+              </a>
+            </li>
+          {% endif %}
+          {%- if nextPost %}
+            <li class="list-outside flex text-right">
+              <a href="{{ nextPost.url }}" class="font-bold">
+                  <div class="text-slate-500">
+                    <span class="text-sm uppercase ">Next</span>
+                    <i class="fa-solid fa-angles-right fa-xs"></i>
+                  </div>
+                  {{ nextPost.data.title }}
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    {%- endif %}
+  {%- endif %}

@@ -1,0 +1,33 @@
+  <div class="text-sm flex flex-wrap gap-1 mt-2">
+    <ul class="
+      m-0
+      list-inside list-none
+      flex flex-wrap
+      not-prose
+      pl-0
+      gap-1
+      ">
+      <li>
+        <time datetime="{{ page.date | htmlDateString }}">
+          {{ page.date | readableDate }}
+        </time>
+      </li>
+      <li>
+        · 3 min
+      </li>
+      <li>
+        · Louis
+      </li>
+
+      {%- for tag in tags | filterTagList %}
+        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <li>
+          <a href="{{ tagUrl }}" >{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+        </li>
+      {%- endfor %}
+    </ul>
+    <div>|</div>
+    <div>
+      <a href="#" class="font-bold">Suggest Changes</a>
+    </div>
+  </div>
