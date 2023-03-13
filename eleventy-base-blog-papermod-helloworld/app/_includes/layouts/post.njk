@@ -8,7 +8,6 @@ layout: layouts/base.njk
   {% include "public/css/prism-diff.css" %}
 {%- endcss %}
 
-
 {%- css %}
   /* Only include the syntax highlighter CSS on blog posts */
   {% include "public/css/youtube.css" %}
@@ -17,8 +16,9 @@ layout: layouts/base.njk
 <div class="
   flex flex-col
   lg:w-6/12 lg:m-auto
+  pt-0 lg:pt-8
   "
-  style="min-height: calc( 100vh - 60px - 100px - 100px )"
+  style="min-height: calc( 100vh - 60px - 100px - 100px );"
   >
   <article class="grow">
     {% include 'components/toc.njk' %}
@@ -40,6 +40,7 @@ layout: layouts/base.njk
       >
 
       {% include 'components/title.njk' %}
+
       {% include 'components/post_meta.njk' %}
 
       <div class="prose-ul:pl-4">
