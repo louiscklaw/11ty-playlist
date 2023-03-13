@@ -1,6 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
+
+{% include './toc.njk' %}
+
 {%- css %}
   /* Only include the syntax highlighter CSS on blog posts */
   {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
@@ -8,7 +11,6 @@ layout: layouts/base.njk
 {%- endcss %}
 
 <div class="
-
   prose
   prose-h3:leading-none
   prose-h3:font-bold
@@ -20,10 +22,11 @@ layout: layouts/base.njk
   prose-img:rounded
   ">
 
-  <h1 class="m-0">{{ title }}</h1>
+  <h1 class="m-0">
+    {{ title }}
+  </h1>
 
   <div class="text-sm flex flex-wrap gap-1 mt-2">
-
     <ul class="
       m-0
       list-inside list-none
