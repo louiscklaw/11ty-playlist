@@ -13,7 +13,12 @@ draft: false
 
 ## Guide
 
-Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup ![](https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png) and create a new site.
+Follow [Quick Start](https://gohugo.io/getting-started/quick-start/) guide to setup <img class="inline h-4" src="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" /> and create a new site.
+
+Higher resolution means more than just a better-quality image. With a Retina
+6K display, <a class="text-blue-600 after:content-['']" href="https://www.
+apple.com/pro-display-xdr/" target="_blank">Pro Display XDR</a> gives you
+nearly 40 percent more screen real estate than a 5K display.
 
 > Note: Use -f to select yml format
 >
@@ -77,20 +82,20 @@ Direct Links:
 
  - Intialize your own hugo mod
 
-```
+```bash
 hugo mod init YOUR_OWN_GIT_REPOSITORY
 ```
 
  - Add PaperMod in your `config.yml` file
 
-```
+```yml
 module:
   imports:
   - path: github.com/adityatelange/hugo-PaperMod
 ```
  - Update theme
 
-```
+```bash
 hugo mod get -u
 ```
 
