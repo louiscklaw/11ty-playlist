@@ -12,25 +12,11 @@ layout: layouts/base.njk
     prose-img:rounded-xl
     prose-headings:underline
     prose-a:text-blue-600
+    max-w-none
     " >
-    <h1 class="text-">PaperMod</h1>
 
-    <p>
-      Welcome to demo of hugo’s theme PaperMod.<br />
-
-      PaperMod is a simple but fast and responsive theme with useful feature-set that enhances UX.<br />
-
-      Do give a 🌟 on Github !<br />
-
-      PaperMod is based on theme Paper.
-    </p>
-
-    <div class="fa-2x">
-      <i class="fa-brands fa-github"></i>
-      <i class="fa-brands fa-telegram"></i>
-    </div>
-
+    {{ content | safe }}
   </div>
 
-  {{ content | safe }}
+
 </div>
