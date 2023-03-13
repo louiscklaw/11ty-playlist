@@ -2,19 +2,21 @@
   {% include "public/css/toc.css" %}
 {%- endcss %}
 
-<div class="
-  toc
-  bg-slate-100
-  rounded-xl
-  p-4 mb-8
-  " style="cursor: pointer">
-  <details>
-  <summary accesskey="c" title="(Alt + C)">
-    <span class="details text-lg font-bold">Table of Contents</span>
-  </summary>
+{% if content | toc %}
+  <div class="
+    toc
+    bg-slate-100
+    rounded-xl
+    p-4 mb-8
+    " style="cursor: pointer">
+    <details>
+    <summary accesskey="c" title="(Alt + C)">
+      <span class="details text-lg font-bold">Table of Contents</span>
+    </summary>
 
-  <div class="inner pt-4">
-    {{ content | toc | safe }}
+    <div class="inner pt-4">
+      {{ content | toc | safe }}
+    </div>
+    </details>
   </div>
-  </details>
-</div>
+{% endif %}

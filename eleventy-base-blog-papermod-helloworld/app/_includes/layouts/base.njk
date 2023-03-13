@@ -53,22 +53,19 @@
 
 	</head>
 
-	<body class="">
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
+	<body>
+    <div class="p-4 flex flex-col" style="min-height: calc( 100vh - 60px )">
+      <div class="grow">
+        {% include './header.njk' %}
+        <main id="skip" class="mt-8">
+          {{ content | safe }}
+        </main>
 
-    <div class="p-4">
-      {% include './header.njk' %}
+      </div>
 
-      <main id="skip" class="my-8">
-        {{ content | safe }}
-      </main>
-
-		  {% include './footer.njk' %}
+      {% include './footer.njk' %}
     </div>
 
-		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
-
-		{# {% include './fontawesome_test.njk' %} #}
-		{% include './imports_foot.njk' %}
+    {% include './imports_foot.njk' %}
 	</body>
 </html>

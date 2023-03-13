@@ -8,29 +8,31 @@ layout: layouts/base.njk
   {% include "public/css/prism-diff.css" %}
 {%- endcss %}
 
-<article style="min-height: 50vh;">
-  {% include 'components/toc.njk' %}
+<div class="flex flex-col" style="min-height: calc( 100vh - 60px - 100px - 100px )">
+  <article class="grow">
+    {% include 'components/toc.njk' %}
 
-  <div class="
-    prose
-    prose-h3:leading-none
-    prose-h3:font-bold
-    prose-li:pl-0
-    prose-code:bg-slate-200
-    prose-code:rounded
-    prose-img:my-0
-    prose-p:before:content-['']
-    prose-img:rounded
-    ">
+    <div class="
+      prose
+      prose-h3:leading-none
+      prose-h3:font-bold
+      prose-li:pl-0
+      prose-code:bg-slate-200
+      prose-code:rounded
+      prose-img:my-0
+      prose-p:before:content-['']
+      prose-img:rounded
+      ">
 
-    {% include 'components/title.njk' %}
-    {% include 'components/post_meta.njk' %}
+      {% include 'components/title.njk' %}
+      {% include 'components/post_meta.njk' %}
 
-    <div class="prose-ul:pl-4">
-      {{ content | safe }}
+      <div class="prose-ul:pl-4 ">
+        {{ content | safe }}
+      </div>
+
     </div>
+  </article>
 
-  </div>
-</article>
-
-{% include 'components/bottom_nav.njk' %}
+  {% include 'components/bottom_nav.njk' %}
+</div>
