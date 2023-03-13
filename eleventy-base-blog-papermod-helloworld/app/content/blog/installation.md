@@ -115,6 +115,7 @@ You can go through few videos which are available on YouTube for getting to know
 
 ▶️ https://youtube.com/playlist?list=PLeiDFxcsdhUrzkK5Jg9IZyiTsIMvXxKZP
 <iframe
+  class="rounded"
   style="
     width: calc( 100vw - 2rem );
     min-height: calc( (100vw - 2rem) / 16 * 9 );
