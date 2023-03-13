@@ -9,12 +9,16 @@ numberOfLatestPostsToShow: 3
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<div class="pt-4">
+  <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+</div>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
+<div class="pt-4">
+  {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+  {% set postslistCounter = postsCount %}
 
-{% include "postslist.njk" %}
+  {% include "postslist.njk" %}
+</div>
 
 <div class="pt-4">
   {% set morePosts = postsCount - numberOfLatestPostsToShow %}
