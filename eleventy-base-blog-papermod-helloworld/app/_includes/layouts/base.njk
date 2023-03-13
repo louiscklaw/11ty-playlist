@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}" data-theme="light">
+<html lang="{{ metadata.language }}" data-theme="cupcake">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,16 +53,18 @@
 
 	</head>
 
-	<body class="p-4 w-screen lg:w-9/12 m-auto" >
+	<body class="">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		{% include './header.njk' %}
+    <div class="p-4">
+      {% include './header.njk' %}
 
-		<main id="skip" class="my-8">
-			{{ content | safe }}
-		</main>
+      <main id="skip" class="my-8">
+        {{ content | safe }}
+      </main>
 
-		{% include './footer.njk' %}
+		  {% include './footer.njk' %}
+    </div>
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 

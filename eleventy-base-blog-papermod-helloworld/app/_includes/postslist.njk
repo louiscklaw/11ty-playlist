@@ -1,12 +1,22 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+<ol class="" >
+
   {% for post in postslist | reverse %}
-  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ post.url }}" class="postlist-link"
-      >{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a
-    >
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}"
-      >{{ post.date | readableDate("LLLL yyyy") }}</time
-    >
-  </li>
+    <li>
+      <a href="#">
+      <div class="p-4 mt-4
+        rounded-xl
+        bg-slate-50
+        border border-slate-150
+        prose
+        prose-p:mb-0
+        prose-h2:mb-2
+      ">
+        <h2>Installation | Update</h2>
+        <p>Read Install and Update instructions here</p>
+        <div>January 20, 2021 · 3 min · Aditya Telange</div>
+      </div>
+      </a>
+    </li>
   {% endfor %}
+
 </ol>
