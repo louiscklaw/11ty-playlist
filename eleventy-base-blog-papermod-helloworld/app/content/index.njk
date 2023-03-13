@@ -16,12 +16,14 @@ numberOfLatestPostsToShow: 3
 
 {% include "postslist.njk" %}
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-  <p>
-    {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.
-  </p>
-{% endif %}
+<div class="pt-4">
+  {% set morePosts = postsCount - numberOfLatestPostsToShow %}
+  {% if morePosts > 0 %}
+    <p>
+      {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.
+    </p>
+  {% endif %}
+</div>
 
 {# List every content page in the project #}
 {#
