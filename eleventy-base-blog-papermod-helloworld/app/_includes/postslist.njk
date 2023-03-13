@@ -2,7 +2,7 @@
 
   {% for post in postslist | reverse %}
     <li>
-      <a href="#">
+      <a href="{{ post.url }}">
       <div class="p-4 mt-4
         rounded-xl
         bg-slate-50
@@ -11,9 +11,18 @@
         prose-p:mb-0
         prose-h2:mb-2
       ">
-        <h2>Installation | Update</h2>
+        {% if post.data.title %}
+          <h2>{{ post.data.title }}</h2>
+        {% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
         <p>Read Install and Update instructions here</p>
-        <div>January 20, 2021 · 3 min · Aditya Telange</div>
+        <div>
+          <time datetime="{{ post.date | htmlDateString }}">
+            {{ post.date | readableDate("LLLL yyyy") }}
+          </time>
+          · 3 min · Aditya Telange
+        </div>
       </div>
       </a>
     </li>
