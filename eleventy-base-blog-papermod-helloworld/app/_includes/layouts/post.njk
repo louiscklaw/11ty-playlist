@@ -43,8 +43,9 @@ layout: layouts/base.njk
     <a href="#">Suggest Changes</a>
   </div>
 
-
-  {{ content | safe }}
+  <div class="prose-ul:pl-4">
+    {{ content | safe }}
+  </div>
 
   {%- if collections.posts %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem %}

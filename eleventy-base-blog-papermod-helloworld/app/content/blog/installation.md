@@ -114,6 +114,10 @@ theme: "PaperMod"
 You can go through few videos which are available on YouTube for getting to know the creator's thoughts as well as the setup process.
 
 ▶️ https://youtube.com/playlist?list=PLeiDFxcsdhUrzkK5Jg9IZyiTsIMvXxKZP
+<iframe
+  style="width: 100%; height: auto;"
+ src="https://www.youtube.com/embed/XkNpbV4JtcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ---
 
