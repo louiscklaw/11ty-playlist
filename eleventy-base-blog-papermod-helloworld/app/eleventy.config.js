@@ -11,6 +11,10 @@ const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 // https://www.npmjs.com/package/eleventy-plugin-nesting-toc
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 
+// https://github.com/adamduncan/eleventy-plugin-i18n
+const i18n = require('eleventy-plugin-i18n');
+const translations = require('./_data/i18n');
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showAllHosts: true,
@@ -106,6 +110,13 @@ module.exports = function (eleventyConfig) {
       headingText: '',      // Optional text to show in heading above the wrapper element
       headingTag: 'h2'      // Heading tag when showing heading above the wrapper element
     })
+
+    eleventyConfig.addPlugin(i18n, {
+      translations,
+      fallbackLocales: {
+        '*': 'en-GB'
+      }
+    });
 
   // Features to make your build faster (when you need them)
 
