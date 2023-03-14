@@ -17,7 +17,7 @@ numberOfLatestPostsToShow: 8
   gap-0 lg:gap-4
   ">
   <div class="w-full lg:w-4/12" >
-    <h1>PaperMod</h1>
+    <h1>Hi, this is louis</h1>
     <p>
       Welcome to demo of hugo’s theme PaperMod.<br />
       PaperMod is a simple but fast and responsive theme with useful feature-set that enhances UX.<br />
@@ -32,11 +32,23 @@ numberOfLatestPostsToShow: 8
       右み料生レソヱ犯2属スタリチ海新志合のみル。落国がどゅト備初
     </p>
 
-    <div class="fa-2x">
-      <i class="fa-brands fa-github"></i>
-      <i class="fa-brands fa-telegram"></i>
+    <div class="text-3xl flex flex-row flex-wrap gap-4">
+      <a href="//github.com/louiscklaw" target="_blank" >
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="//www.linkedin.com/in/louiscklaw"  target="_blank">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a href="//t.me/louislabs"  target="_blank">
+        <i class="fa-brands fa-telegram"></i>
+      </a>
+      <a href="//louislabs.slack.com/"  target="_blank">
+        <i class="fa-brands fa-slack"></i>
+      </a>
     </div>
   </div>
+
+
 
   <div class="w-full" >
     {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
