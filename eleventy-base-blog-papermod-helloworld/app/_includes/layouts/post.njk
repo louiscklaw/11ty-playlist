@@ -6,9 +6,7 @@ layout: layouts/base.njk
   /* Only include the syntax highlighter CSS on blog posts */
   {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
   {% include "public/css/prism-diff.css" %}
-{%- endcss %}
 
-{%- css %}
   {% include "public/css/youtube.css" %}
 {%- endcss %}
 
@@ -34,6 +32,8 @@ layout: layouts/base.njk
       prose-img:rounded
       prose-li:pl-0
       prose-p:before:content-['']
+      prose-a:no-underline
+      prose-a:hover:underline
       "
       >
 
@@ -42,7 +42,19 @@ layout: layouts/base.njk
       {% include 'components/post_meta.njk' %}
 
       <div class="prose-ul:pl-4">
-        {{ content | safe }}
+        {% if lang=='zh' %}
+          {% css %}
+            {% include "public/css/chinese_spacing.css" %}
+          {% endcss %}
+
+          <div lang="zh">
+            {{ content | safe }}
+          </div>
+        {% else %}
+          {{ content | safe }}
+        {% endif %}
+
+
       </div>
 
     </div>

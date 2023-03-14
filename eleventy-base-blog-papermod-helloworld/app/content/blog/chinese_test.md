@@ -2,8 +2,11 @@
 title : 我在淘寶買了BambuLabX1-CarbonCombo
 date : 2023-01-23
 draft : false
+listCollection: 'politics'
+lang: 'zh'
 ---
 
+# 这是中文文本。
 
 待進變果沒致友環健問水法代人苦天。
 業立臺四即文善公作有往，等怕準命小電個。
