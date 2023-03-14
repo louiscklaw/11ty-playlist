@@ -13,11 +13,19 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 
 // https://github.com/adamduncan/eleventy-plugin-i18n
 const i18n = require('eleventy-plugin-i18n');
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
+
 const translations = require('./_data/i18n');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showAllHosts: true,
+  });
+
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    // any valid BCP 47-compatible language tag is supported
+    // zh-HK 	Chinese 	Hond Kong 	Hong Kong, traditional characters
+    defaultLanguage: "en-US",
   });
 
   // Copy the contents of the `public` folder to the output folder
