@@ -57,15 +57,31 @@ layout: layouts/base.njk
 
     text-xl
   '>
-  <div class="
-    flex flex-row gap-4
-    prose prose-h3:font-normal
-    ">
-    <h3 class="">
-      有問題？附近有個 telegram 掣，不如㩒㩒佢？
-    </h3>
-  </div>
-  <a href="//t.me/@louislabs" target="_blank" class="w-12 lg:w-8" >
-    {% image "telegram.svg", "photo of my cat"  %}
-  </a>
+
+  <div class="block lg:hidden mt-6"></div>
+
+    <div class="
+      flex flex-row gap-4
+      prose
+      prose-h3:text-base
+      prose-h3:font-normal
+      ">
+      <h3 class="hidden lg:block">
+        有問題？隔離有個 telegram 掣，不如㩒㩒佢？
+      </h3>
+      <h3 class="block lg:hidden">
+        有問題？下面有個 telegram 掣，不如㩒㩒佢？
+      </h3>
+    </div>
+
+    <a href="//t.me/@louislabs" target="_blank"
+      class="
+        w-12 lg:w-8
+      "
+      >
+      {% image "telegram.svg", "photo of my cat"  %}
+    </a>
+
+  <div class="block lg:hidden mt-6"></div>
+
 </div>
