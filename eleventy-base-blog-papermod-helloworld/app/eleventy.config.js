@@ -128,6 +128,10 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("search", searchFilter);
+  eleventyConfig.addCollection("movies", collection => {
+    return [...collection.getFilteredByGlob("./content/movies/**/*.md")];
+  });
 
   // Features to make your build faster (when you need them)
 
