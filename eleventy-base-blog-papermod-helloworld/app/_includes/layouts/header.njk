@@ -17,17 +17,34 @@
             </svg>
           </div>
           <div class="border border-l-indigo-500 text-base h-[2rem]"></div>
-          <div >
+          <div class="text-bases">
+            {% if locale == 'en-GB' %}
             <ul class="flex flex-row justify-center items-center gap-1">
               <li >
-                <a href="https://adityatelange.github.io/hugo-PaperMod/fr/" title="French" aria-label=":fr:">
-                  <img style="width:auto; height:1rem" src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg" />
+                <a href="/zh-HK" title="HongKong" aria-label=":fr:">
+                  <i class="fa-solid fa-language"></i>
                 </a>
               </li>
               <li>
-                  <a href="https://adityatelange.github.io/hugo-PaperMod/fa/" title="Hk" aria-label="Hk">HK</a>
+                  <a href="https://adityatelange.github.io/hugo-PaperMod/fa/" title="Hk" aria-label="Hk">
+                    中文
+                  </a>
               </li>
             </ul>
+            {% else %}
+              <ul class="flex flex-row justify-center items-center gap-1 ">
+                <li >
+                  <a href="/en-US" title="english" aria-label=":us:">
+                    <i class="fa-solid fa-language"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://adityatelange.github.io/hugo-PaperMod/fa/" title="US" aria-label="US">
+                    US
+                  </a>
+                </li>
+              </ul>
+            {% endif %}
           </div>
         </div>
       </div>
