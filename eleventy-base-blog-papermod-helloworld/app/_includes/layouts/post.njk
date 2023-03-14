@@ -37,11 +37,16 @@ layout: layouts/base.njk
       "
       >
 
-      {% include 'components/title.njk' %}
+      <div class="pt-4">
+        {% include 'components/title.njk' %}
+      </div>
+      <div class="pt-4">
+        {% include 'components/post_meta.njk' %}
+      </div>
 
-      {% include 'components/post_meta.njk' %}
-
-      <div class="prose-ul:pl-4">
+      <div class="
+        pt-24 lg:pt-12
+        prose-ul:pl-4">
         {% if lang=='zh' %}
           {% css %}
             {% include "public/css/chinese_spacing.css" %}
