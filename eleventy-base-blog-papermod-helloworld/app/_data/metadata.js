@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'PaperMod',
-  url: 'https://11tyhelloworld.iamon99.com/',
+  title: 'louiscklaw',
+  url: 'https://louiscklaw.github.io',
   language: 'en',
-  description: 'I am writing to try making a papermod theme using 11ty and tailwindcss.',
+  description: 'Hello, I am louis law and this is my portfolio',
   author: {
     name: 'louiscklaw',
-    email: 'youremailaddress@11tyhelloworld.iamon99.com',
-    url: 'https://11tyhelloworld.iamon99.com/about/',
+    email: 'logickee@gmail.com',
+    url: 'https://louiscklaw.github.io',
   },
 };
