@@ -1,20 +1,11 @@
-module.exports = {
-  hello: {
-    'en-US': 'Hello',
-    'es-ES': 'Hola'
-  },
-  Works: {
-    'en-US': 'Works',
-    'es-ES': 'Hola',
-    'zh-HK': '手作仔'
-  },  Search: {
-    'zh-HK': '搵嘢'
-  },
-  Tags: {
-    'zh-HK': '標纖'
-  },
-  hello_name: {
-    'en-US': 'Hello, {{ name }}!',
-    'es-ES': '¡Hola {{ name }}!'
-  }
-};
+const _ = require('lodash')
+
+const zhHK = require('./zh-HK')
+const enUS = require('./en-US')
+
+// ​bloat object by lang
+
+Object.keys(zhHK).forEach(k => { zhHK[k] = {'zh-HK': zhHK[k]}})
+Object.keys(enUS).forEach(k => { enUS[k] = {'en-US': enUS[k]}})
+
+module.exports = _.merge(zhHK, enUS)
