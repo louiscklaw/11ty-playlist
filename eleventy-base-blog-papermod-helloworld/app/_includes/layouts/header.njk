@@ -18,29 +18,21 @@
           </div>
           <div class="border border-l-indigo-500 text-base h-[2rem]"></div>
           <div class="text-bases">
-            {% if locale == 'en-GB' %}
+            {% if locale == 'en-US' %}
             <ul class="flex flex-row justify-center items-center gap-1">
               <li >
-                <a href="/zh-HK" title="HongKong" aria-label=":fr:">
+                <a href="/zh-HK/" title="HongKong" aria-label=":fr:">
                   <i class="fa-solid fa-language"></i>
+                  <span>中文</span>
                 </a>
-              </li>
-              <li>
-                  <a href="https://adityatelange.github.io/hugo-PaperMod/fa/" title="Hk" aria-label="Hk">
-                    中文
-                  </a>
               </li>
             </ul>
             {% else %}
               <ul class="flex flex-row justify-center items-center gap-1 ">
                 <li >
-                  <a href="/en-US" title="english" aria-label=":us:">
+                  <a href="/en-US/" title="english" aria-label=":us:">
                     <i class="fa-solid fa-language"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://adityatelange.github.io/hugo-PaperMod/fa/" title="US" aria-label="US">
-                    US
+                    <span>US</span>
                   </a>
                 </li>
               </ul>

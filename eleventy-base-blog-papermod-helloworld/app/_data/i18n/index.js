@@ -1,10 +1,10 @@
 module.exports = {
   hello: {
-    'en-GB': 'Hello',
+    'en-US': 'Hello',
     'es-ES': 'Hola'
   },
   Works: {
-    'en-GB': 'Works',
+    'en-US': 'Works',
     'es-ES': 'Hola',
     'zh-HK': '手作仔'
   },  Search: {
@@ -14,7 +14,7 @@ module.exports = {
     'zh-HK': '標纖'
   },
   hello_name: {
-    'en-GB': 'Hello, {{ name }}!',
+    'en-US': 'Hello, {{ name }}!',
     'es-ES': '¡Hola {{ name }}!'
   }
 };

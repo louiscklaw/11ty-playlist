@@ -114,7 +114,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(i18n, {
       translations,
       fallbackLocales: {
-        '*': 'en-GB'
+        '*': 'en-US'
       }
     });
 
