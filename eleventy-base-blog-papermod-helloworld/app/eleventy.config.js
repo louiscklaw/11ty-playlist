@@ -17,6 +17,9 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 const translations = require('./_data/i18n');
 
+const searchFilter = require("./filters/searchFilter");
+
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showAllHosts: true,
@@ -109,22 +112,22 @@ module.exports = function (eleventyConfig) {
     });
   });
 
-  eleventyConfig.addPlugin(pluginTOC,
-    {
-      tags: ['h2', 'h3', 'h4'], // Which heading tags are selected (headings must each have an ID attribute)
-      ignoredElements: [],  // Elements to ignore when constructing the label for every header (useful for ignoring permalinks, must be selectors)
-      wrapper: 'nav',       // Element to put around the root `ol`
-      wrapperClass: 'toc',  // Class for the element around the root `ol`
-      headingText: '',      // Optional text to show in heading above the wrapper element
-      headingTag: 'h2'      // Heading tag when showing heading above the wrapper element
-    })
+  eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2', 'h3', 'h4'], // Which heading tags are selected (headings must each have an ID attribute)
+    ignoredElements: [],  // Elements to ignore when constructing the label for every header (useful for ignoring permalinks, must be selectors)
+    wrapper: 'nav',       // Element to put around the root `ol`
+    wrapperClass: 'toc',  // Class for the element around the root `ol`
+    headingText: '',      // Optional text to show in heading above the wrapper element
+    headingTag: 'h2'      // Heading tag when showing heading above the wrapper element
+  })
 
-    eleventyConfig.addPlugin(i18n, {
-      translations,
-      fallbackLocales: {
-        '*': 'en-US'
-      }
-    });
+  eleventyConfig.addPlugin(i18n, {
+    translations,
+    fallbackLocales: {
+      '*': 'en-US'
+    }
+  });
+
 
   // Features to make your build faster (when you need them)
 
