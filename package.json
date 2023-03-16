@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "gitUpdate": "git add . && git commit -m'update eleventy-base-blog-papermod-helloworld,' && git push",
-    "format":"prettier --write **/*.sh"
+    "format": "prettier --write **/*.{js,json,yml,njk}"
   },
   "repository": {
     "type": "git",
