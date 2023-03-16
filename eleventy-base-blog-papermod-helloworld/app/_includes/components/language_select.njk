@@ -1,0 +1,21 @@
+<div class="text-bases">
+  {% if locale == 'en-US' %}
+  <ul class="flex flex-row justify-center items-center gap-1">
+    <li>
+      <a href="/zh-HK/" title="HongKong" aria-label=":fr:">
+        <i class="fa-solid fa-language"></i>
+        <span>中文</span>
+      </a>
+    </li>
+  </ul>
+  {% else %}
+  <ul class="flex flex-row justify-center items-center gap-1">
+    <li>
+      <a href="/en-US/" title="english" aria-label=":us:">
+        <i class="fa-solid fa-language"></i>
+        <span>US</span>
+      </a>
+    </li>
+  </ul>
+  {% endif %}
+</div>

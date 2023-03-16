@@ -8,45 +8,11 @@
           </a>
         </div>
         <div class="block grow lg:hidden"></div>
+
         <div class="flex flex-row items-center gap-2">
-          <div>1
-            <svg
-              id="moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>2
-          </div>
+          {% include 'components/theme_select.njk' %}
           <div class="border border-l-indigo-500 text-base h-[2rem]"></div>
-          <div class="text-bases">
-            {% if locale == 'en-US' %}
-            <ul class="flex flex-row justify-center items-center gap-1">
-              <li>
-                <a href="/zh-HK/" title="HongKong" aria-label=":fr:">
-                  <i class="fa-solid fa-language"></i>
-                  <span>中文</span>
-                </a>
-              </li>
-            </ul>
-            {% else %}
-            <ul class="flex flex-row justify-center items-center gap-1">
-              <li>
-                <a href="/en-US/" title="english" aria-label=":us:">
-                  <i class="fa-solid fa-language"></i>
-                  <span>US</span>
-                </a>
-              </li>
-            </ul>
-            {% endif %}
-          </div>
+          {% include 'components/language_select.njk' %}}
         </div>
       </div>
     </div>
