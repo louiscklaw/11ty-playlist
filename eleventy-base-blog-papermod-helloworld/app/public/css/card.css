@@ -8,8 +8,8 @@
 }
 
 #site-qr-canvas canvas {
-  width: 16.6666666667vw;
-  height: 16.6666666667vw;
+  width: 25vw;
+  height: 25vw;
   max-width: 160px;
   max-height: 160px;
 }
