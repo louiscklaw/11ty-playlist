@@ -3,32 +3,19 @@ permalink: /tags/
 layout: layouts/base.njk
 ---
 
-<div class="
-  flex flex-col
-  m-auto
-  w-full lg:w-6/12
-  pt-0 lg:pt-8
-  "
-  style="
-    min-height: calc( 100vh - 60px - 100px - 100px );
-    "
-  >
-
+<div class="flex flex-col m-auto w-full lg:w-6/12 pt-0 lg:pt-8" style="min-height: calc(100vh - 60px - 100px - 100px)">
   <div class="prose max-w-none">
     <h1>Tags</h1>
 
     <ul class="list-none list-inside p-0 flex flex-row flex-wrap gap-4">
-      {% for tag in collections.all | getAllTags | filterTagList %}
+      {% for tag in collections.all | getAllTags | filterTagList %} {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset
+      %}
 
-        {% set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-
-        <li>
-          <a href="{{ tagUrl }}" >
-            <button class='btn btn-active btn-ghost'>
-              {{ tag }}
-            </button>
-          </a>
-        </li>
+      <li>
+        <a href="{{ tagUrl }}">
+          <button class="btn btn-active btn-ghost"> {{ tag }} </button>
+        </a>
+      </li>
 
       {% endfor %}
     </ul>

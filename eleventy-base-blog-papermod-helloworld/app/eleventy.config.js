@@ -13,12 +13,11 @@ const pluginTOC = require('eleventy-plugin-nesting-toc');
 
 // https://github.com/adamduncan/eleventy-plugin-i18n
 const i18n = require('eleventy-plugin-i18n');
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const { EleventyI18nPlugin } = require('@11ty/eleventy');
 
 const translations = require('./_data/i18n');
 
-const searchFilter = require("./filters/searchFilter");
-
+const searchFilter = require('./filters/searchFilter');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -28,7 +27,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
     // zh-HK 	Chinese 	Hond Kong 	Hong Kong, traditional characters
-    defaultLanguage: "en-US",
+    defaultLanguage: 'en-US',
   });
 
   // Copy the contents of the `public` folder to the output folder
@@ -114,23 +113,23 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginTOC, {
     tags: ['h2', 'h3', 'h4'], // Which heading tags are selected (headings must each have an ID attribute)
-    ignoredElements: [],  // Elements to ignore when constructing the label for every header (useful for ignoring permalinks, must be selectors)
-    wrapper: 'nav',       // Element to put around the root `ol`
-    wrapperClass: 'toc',  // Class for the element around the root `ol`
-    headingText: '',      // Optional text to show in heading above the wrapper element
-    headingTag: 'h2'      // Heading tag when showing heading above the wrapper element
-  })
+    ignoredElements: [], // Elements to ignore when constructing the label for every header (useful for ignoring permalinks, must be selectors)
+    wrapper: 'nav', // Element to put around the root `ol`
+    wrapperClass: 'toc', // Class for the element around the root `ol`
+    headingText: '', // Optional text to show in heading above the wrapper element
+    headingTag: 'h2', // Heading tag when showing heading above the wrapper element
+  });
 
   eleventyConfig.addPlugin(i18n, {
     translations,
     fallbackLocales: {
-      '*': 'en-US'
-    }
+      '*': 'en-US',
+    },
   });
 
-  eleventyConfig.addFilter("search", searchFilter);
-  eleventyConfig.addCollection("movies", collection => {
-    return [...collection.getFilteredByGlob("./content/movies/**/*.md")];
+  eleventyConfig.addFilter('search', searchFilter);
+  eleventyConfig.addCollection('movies', collection => {
+    return [...collection.getFilteredByGlob('./content/movies/**/*.md')];
   });
 
   // Features to make your build faster (when you need them)

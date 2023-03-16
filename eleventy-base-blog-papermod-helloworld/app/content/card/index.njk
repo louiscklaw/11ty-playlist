@@ -2,39 +2,34 @@
 layout: layouts/base.njk
 ---
 
-{%- css %}
-  {% include "public/css/card.css" %}
-{%- endcss %}
+{%- css %} {% include "public/css/card.css" %} {%- endcss %}
 
 <script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
 
 <div class="flex flex-col gap-8 h-[60vh]">
   <div class="grow"></div>
-  <div class='flex flex-row justify-center gap-4 lg:gap-8'>
-
-    <div class='basis-1/4 lg:basis-1/12' >
-      <img class="rounded-full" src="https://avatars.githubusercontent.com/u/1376093" alt="Rounded avatar">
+  <div class="flex flex-row justify-center gap-4 lg:gap-8">
+    <div class="basis-1/4 lg:basis-1/12">
+      <img class="rounded-full" src="https://avatars.githubusercontent.com/u/1376093" alt="Rounded avatar" />
     </div>
 
     <div class="w-1 border-l"></div>
 
-    <div class='basis-1/4 lg:basis-1/12'>
-      <div id="site-qr-canvas">
-        {# width and height handled by scss #}
-      </div>
+    <div class="basis-1/4 lg:basis-1/12">
+      <div id="site-qr-canvas"> {# width and height handled by scss #} </div>
     </div>
   </div>
 
   <div class="hidden lg:block h-[5rem]"></div>
 
-  <div class='flex flex-row justify-center text-center'>
+  <div class="flex flex-row justify-center text-center">
     <div class="prose">
-      <h1 class="text-xl lg:text-3xl" id='greetings'>Hi, I am louis</h1>
+      <h1 class="text-xl lg:text-3xl" id="greetings">Hi, I am louis</h1>
       <h2 class="text-base lg:text-2xl font-normal">a validation engineer</h2>
     </div>
   </div>
 
-  <div class='flex flex-row justify-center text-center text-3xl gap-4'>
+  <div class="flex flex-row justify-center text-center text-3xl gap-4">
     <a href="//github.com/louiscklaw" target="_blank" class="px-2">
       <i class="fa-brands fa-github"></i>
     </a>
@@ -44,7 +39,7 @@ layout: layouts/base.njk
     <a href="//louislabs.slack.com/" class="px-2" target="_blank"><i class="fa-brands fa-slack"></i></a>
   </div>
 
-  <div class='flex flex-row justify-center text-center text-3xl gap-4'>
+  <div class="flex flex-row justify-center text-center text-3xl gap-4">
     <button class="btn">works</button>
     <button class="btn">tags</button>
   </div>
@@ -57,25 +52,25 @@ layout: layouts/base.njk
     const para = document.querySelector('#greetings');
     const compStyles = window.getComputedStyle(para);
 
-    const quarterWidth = window.innerWidth * 0.25
+    const quarterWidth = window.innerWidth * 0.25;
 
     const qrCode = new QRCodeStyling({
-        width: 300,
-        height: 300,
-        // type: "svg",
-        data: window.location.href,
-        // image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-        dotsOptions: {
-          color: compStyles.getPropertyValue('color'),
-          type: "rounded"
-        },
-        // backgroundOptions: {color: "#e9ebee",},
-        imageOptions: {crossOrigin: "anonymous",margin: 2 }
-      });
+      width: 300,
+      height: 300,
+      // type: "svg",
+      data: window.location.href,
+      // image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+      dotsOptions: {
+        color: compStyles.getPropertyValue('color'),
+        type: 'rounded',
+      },
+      // backgroundOptions: {color: "#e9ebee",},
+      imageOptions: { crossOrigin: 'anonymous', margin: 2 },
+    });
 
-    qrCode.append(document.getElementById("site-qr-canvas"));
-    document.removeEventListener("DOMContentLoaded", GenQRLouisCklaw)
-  }
+    qrCode.append(document.getElementById('site-qr-canvas'));
+    document.removeEventListener('DOMContentLoaded', GenQRLouisCklaw);
+  };
 
-  document.addEventListener('DOMContentLoaded',GenQRLouisCklaw)
+  document.addEventListener('DOMContentLoaded', GenQRLouisCklaw);
 </script>

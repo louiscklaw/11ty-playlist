@@ -6,17 +6,11 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 8
 ---
 
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+{% set postsCount = collections.posts | length %} {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow)
+%}
 
-<div class="
-  mx-auto
-  w-full lg:w-10/12
-  flex
-  flex-col lg:flex-row
-  gap-0 lg:gap-4
-  ">
-  <div class="w-full lg:w-4/12" >
+<div class="mx-auto w-full lg:w-10/12 flex flex-col lg:flex-row gap-0 lg:gap-4">
+  <div class="w-full lg:w-4/12">
     <h1>Hi, this is louis</h1>
     <p>
       Welcome to demo of hugo’s theme PaperMod.<br />
@@ -33,39 +27,33 @@ numberOfLatestPostsToShow: 8
     </p>
 
     <div class="text-3xl flex flex-row flex-wrap gap-4">
-      <a href="//github.com/louiscklaw" target="_blank" >
+      <a href="//github.com/louiscklaw" target="_blank">
         <i class="fa-brands fa-github"></i>
       </a>
-      <a href="//www.linkedin.com/in/louiscklaw"  target="_blank">
+      <a href="//www.linkedin.com/in/louiscklaw" target="_blank">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-      <a href="//t.me/louislabs"  target="_blank">
+      <a href="//t.me/louislabs" target="_blank">
         <i class="fa-brands fa-telegram"></i>
       </a>
-      <a href="//louislabs.slack.com/"  target="_blank">
+      <a href="//louislabs.slack.com/" target="_blank">
         <i class="fa-brands fa-slack"></i>
       </a>
     </div>
   </div>
 
-
-
-  <div class="w-full" >
-    {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-    {% set postslistCounter = postsCount %}
-
-    {% include "worklist.njk" %}
+  <div class="w-full">
+    {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount
+    %} {% include "worklist.njk" %}
   </div>
 </div>
 
-
-{# List every content page in the project #}
-{#
-  <ul>
-    {%- for entry in collections.all %}
-    <li
-      ><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li
-    >
-    {%- endfor %}
-  </ul>
+{# List every content page in the project #} {#
+<ul>
+  {%- for entry in collections.all %}
+  <li
+    ><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li
+  >
+  {%- endfor %}
+</ul>
 #}
