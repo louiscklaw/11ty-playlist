@@ -8,14 +8,10 @@
 }
 
 #site-qr-canvas canvas {
-  width: 25vw;
-  height: 25vw;
-}
-@media screen and (min-width: 1024px) {
-  #site-qr-canvas canvas {
-    width: 8.3333333333vw;
-    height: 8.3333333333vw;
-  }
+  width: 16.6666666667vw;
+  height: 16.6666666667vw;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 /*# sourceMappingURL=card.css.map */

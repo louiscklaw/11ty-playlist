@@ -9,16 +9,11 @@
 
 #site-qr-canvas {
   canvas {
-    width: 25vw;
-    height: 25vw;
-  }
+    width: calc(100vw / 6);
+    height: calc(100vw / 6);
 
-  // 'lg': '1024px',
-  @media screen and (min-width: 1024px) {
-    canvas {
-      width: calc(100vw / 12);
-      height: calc(100vw / 12);
-    }
+    max-width: 160px;
+    max-height: 160px;
   }
 }
 
