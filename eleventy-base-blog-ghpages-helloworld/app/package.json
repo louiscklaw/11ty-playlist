@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/portfolio-11ty/",
+    "publish":"node ./publish.js",
     "start": "npx @11ty/eleventy --serve --quiet",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
