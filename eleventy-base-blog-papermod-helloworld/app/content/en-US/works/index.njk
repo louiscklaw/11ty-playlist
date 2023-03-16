@@ -35,7 +35,7 @@ numberOfLatestPostsToShow: 8
     </div>
   </div>
 
-  <div class="w-full">
+  <div class="w-full pt-16 lg:pt-0">
     {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount
     %} {% include "worklist.njk" %}
   </div>
