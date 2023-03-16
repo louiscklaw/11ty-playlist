@@ -1,4 +1,4 @@
-<div>
+<div id="toggleTheme">
   <svg
     id="moon"
     xmlns="http://www.w3.org/2000/svg"
@@ -14,3 +14,32 @@
     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
   </svg>
 </div>
+
+<script>
+  use_dark_theme = false
+  function changeThemeLight(){
+    console.log('changeThemeLight')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'emerald';
+  }
+
+  function changeThemeDark(){
+    console.log('changeThemeDark')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'dark';
+  }
+
+  function toggleTheme(){
+
+    use_dark_theme = !use_dark_theme
+    if (use_dark_theme) {
+      changeThemeDark()
+    }else{
+      changeThemeLight()
+    }
+  }
+
+  const button = document.querySelector("#toggleTheme");
+  button.addEventListener("click", toggleTheme);
+
+</script>
