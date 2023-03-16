@@ -4,8 +4,8 @@
   "description": "A starter repository for a blog web site using the Eleventy site generator.",
   "scripts": {
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/portfolio-11ty/",
-    "publish-ghpages":"node ./publish.js",
-    "publish":"npm-run-all build-ghpages publish-ghpages",
+    "publish-ghpages": "node ./publish.js",
+    "publish": "npm-run-all build-ghpages publish-ghpages",
     "start": "npx @11ty/eleventy --serve --quiet",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",

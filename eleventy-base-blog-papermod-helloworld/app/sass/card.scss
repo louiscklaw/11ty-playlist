@@ -1,9 +1,9 @@
-.helloworld{
+.helloworld {
   background-color: tomato;
 
   // 'lg': '1024px',
   @media screen and (min-width: 1024px) {
-      background-color: gold;
+    background-color: gold;
   }
 }
 
@@ -15,15 +15,12 @@
 
   // 'lg': '1024px',
   @media screen and (min-width: 1024px) {
-    canvas{
-      width: calc( 100vw / 12 );
-      height: calc( 100vw / 12 );
+    canvas {
+      width: calc(100vw / 12);
+      height: calc(100vw / 12);
     }
   }
-
-
 }
-
 
 // width: calc( 100vw - 2rem );
 // min-height: calc( (100vw - 2rem) / 16 * 9 );
