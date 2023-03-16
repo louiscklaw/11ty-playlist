@@ -19,7 +19,10 @@ numberOfLatestPostsToShow: 8
       PaperMod is based on theme Paper.<br />
     </p>
 
-    <div class="text-3xl flex flex-row flex-wrap gap-4">
+    <div class="
+      text-3xl flex flex-row flex-wrap gap-4
+      pt-4 lg:pt-0
+      ">
       <a href="//github.com/louiscklaw" target="_blank">
         <i class="fa-brands fa-github"></i>
       </a>
@@ -35,7 +38,7 @@ numberOfLatestPostsToShow: 8
     </div>
   </div>
 
-  <div class="w-full pt-16 lg:pt-0">
+  <div class="w-full pt-8 lg:pt-0">
     {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %} {% set postslistCounter = postsCount
     %} {% include "worklist.njk" %}
   </div>
