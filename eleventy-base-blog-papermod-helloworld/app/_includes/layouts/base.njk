@@ -38,6 +38,7 @@
       {% include "public/css/cust_theme.css" %}
       {% include "public/css/bottom_nav.css" %}
       {% include "public/css/helloworld.css" %}
+      {% include "public/css/palette.css" %}
     {% endcss %}
 
     {%- css %}
@@ -61,11 +62,16 @@
   </head>
 
   <body>
+    <div class="palette" style="width:0px;height:0px;"></div>
+
     <div class="p-4 flex flex-col" style="min-height: calc(100vh - 60px)">
       <div class="grow">
         {% include './header.njk' %}
 
-        <main id="skip" class="mt-8 lg:mt-20"> {{ content | safe }} </main>
+        <main id="skip" class="mt-8 lg:mt-20">
+          {{ content | safe }}
+        </main>
+
       </div>
 
       {% include './footer.njk' %}
