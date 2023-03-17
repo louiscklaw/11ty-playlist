@@ -1,3 +1,5 @@
+test/eleventy-base-blog-papermod-helloworld/helloworld
+
 ```bash
 # to start dev docker
 
