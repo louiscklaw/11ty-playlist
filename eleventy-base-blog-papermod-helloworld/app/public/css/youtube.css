@@ -2,21 +2,10 @@
   width: calc(100vw - 2rem);
   min-height: calc((100vw - 2rem) / 16 * 9);
 }
-@media screen and (min-width: 640px) {
-  .youtube .youtube {
-    background-color: tomato;
-  }
-}
 @media screen and (min-width: 768px) {
   .youtube {
-    background-color: pink;
     width: 33vw;
     min-height: 18.5625vw;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .youtube {
-    background-color: cyan;
   }
 }
 
