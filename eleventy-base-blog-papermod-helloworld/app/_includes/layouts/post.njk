@@ -14,12 +14,15 @@ layout: layouts/base.njk
   >
 
   <article class="grow">
-    <div class="flex flex-row gap-8">
-
+    <div class="
+      flex
+      flex-col lg:flex-row
+      gap-8
+      ">
 
       <div
         class="
-          max-w-screen-lg
+          w-full lg:max-w-screen-lg
           break-all
           prose max-w-none
           prose-code:bg-slate-200
@@ -34,8 +37,12 @@ layout: layouts/base.njk
           prose-a:hover:underline
           "
       >
-        <div class="pt-4"> {% include 'components/title.njk' %} </div>
-        <div class="pt-4"> {% include 'components/post_meta.njk' %} </div>
+        <div class="pt-4">
+          {% include 'components/title.njk' %}
+        </div>
+        <div class="pt-4">
+          {% include 'components/post_meta.njk' %}
+        </div>
 
         <div class="pt-12 lg:pt-12 prose-ul:pl-4">
           {% if lang=='zh' %}
@@ -47,13 +54,16 @@ layout: layouts/base.njk
               {{ content | safe }}
             </div>
           {% else %}
-            {{ content | safe }}
+            <div>
+              {{ content | safe }}
+            </div>
           {% endif %}
         </div>
       </div>
 
       <div class="
         basis-1/4
+        xs:order-first
         ">
         {% include 'components/toc.njk' %}
       </div>
