@@ -7,13 +7,16 @@
     const resEl = document.getElementById('searchResults');
     const resTitleEl = document.getElementById('result-title');
     const noResultsEl = document.getElementById('noResultsFound');
+    const typeSomethingToSearchEl = document.getElementById('typeSomethingToSearch');
 
     if (e.target.value.length == 0){
 
       resEl.style.display = 'none';
       resTitleEl.style.display='none';
       noResultsEl.style.display = 'none';
+      typeSomethingToSearchEl.style.display="block"
     }else{
+      typeSomethingToSearchEl.style.display="none"
 
       const results = window.searchIndex.search(e.target.value, {
         bool: 'OR',

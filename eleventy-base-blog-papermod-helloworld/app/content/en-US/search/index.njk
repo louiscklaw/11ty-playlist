@@ -6,6 +6,7 @@ layout: layouts/base.njk
   <p>No results found.</p>
 </div>
 
+
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"
@@ -25,9 +26,23 @@ layout: layouts/base.njk
     <input
       id="searchField"
       placeholder="Want to search something..."
-      class="input input-bordered w-full max-w-xs"
+      class="
+        w-full lg:max-w-md
+        input input-bordered
+        "
       />
 
+  </div>
+
+  <div id="typeSomethingToSearch">
+    <div class="w-full h-[33vh] flex items-center" >
+      <div class="
+        py-12 w-full
+        flex flex-row justify-center
+        ">
+        <p>Type something above to start search ?</p>
+      </div>
+    </div>
   </div>
 
   <div class="
