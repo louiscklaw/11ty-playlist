@@ -7,31 +7,53 @@
       expand: true,
     });
 
+    const resTitleEl = document.getElementById('result-title');
+
+
     const resEl = document.getElementById('searchResults');
     const noResultsEl = document.getElementById('noResultsFound');
 
     resEl.innerHTML = '';
+
     if (results) {
+      // show result
       noResultsEl.style.display = 'none';
+      resTitleEl.style.display='block'
+
       results.map(r => {
         const { id, title, description } = r.doc;
-        const el = document.createElement('li');
-        resEl.appendChild(el);
+        const liEl = document.createElement('li');
+        liEl.classList.add('basis-1/3')
+        liEl.classList.add('px-2')
+        resEl.appendChild(liEl);
 
-        const h3 = document.createElement('h3');
-        el.appendChild(h3);
+        const div = document.createElement('div');
+        div.innerHTML=
+`
+<a href="${id}">
+  <div class="
+    worklist-card
+    p-2 lg:p-4
+    border border-slate-150 rounded-xl
+    prose prose-p:mb-0 prose-h2:text-base
+    ">
+    <h2>${title}</h2>
+    <code>${id}</code>
 
-        const a = document.createElement('a');
-        a.setAttribute('href', id);
-        a.textContent = title;
-        h3.appendChild(a);
-
-        const p = document.createElement('p');
-        p.textContent = description;
-        el.appendChild(p);
+    <p class="mt-4">
+      ${'Read Install and Update instructions here'}
+    </p>
+    <div>
+    </div>
+  </div>
+</a>
+`
+        liEl.appendChild(div);
       });
     } else {
+      // hide result
       noResultsEl.style.display = 'block';
+      resTitleEl.style.display='none'
     }
   };
 

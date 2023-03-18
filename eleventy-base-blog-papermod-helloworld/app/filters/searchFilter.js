@@ -6,6 +6,7 @@ module.exports = function (collection) {
     this.addField('title');
     this.addField('excerpt');
     this.addField('genres');
+    this.addField('hello');
     this.setRef('id');
   });
 
@@ -16,6 +17,7 @@ module.exports = function (collection) {
       title: page.template.frontMatter.data.title,
       excerpt: page.template.frontMatter.data.excerpt,
       genres: page.template.frontMatter.data.genres,
+      hello: page.template.frontMatter.data.hello,
     });
   });
 
