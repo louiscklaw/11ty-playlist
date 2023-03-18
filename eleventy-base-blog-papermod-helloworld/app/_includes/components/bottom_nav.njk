@@ -20,6 +20,10 @@
             <div class="nav-text-title pt-2 lg:pt-4">{{ previousPost.data.title }}</div>
           </a>
         </li>
+        {% else %}
+          <div>
+            {# space holder for 1st post #}
+          </div>
         {% endif %}
 
         {%- if nextPost %}
