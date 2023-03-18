@@ -51,6 +51,13 @@ module.exports = function (eleventyConfig) {
     showAllHosts: true,
   });
 
+  eleventyConfig.addShortcode("user", function(firstName, lastName) {
+    return `helloworld ${firstName} ${lastName}`
+
+   });
+
+
+
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
     // zh-HK 	Chinese 	Hond Kong 	Hong Kong, traditional characters
