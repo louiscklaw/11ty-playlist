@@ -1,9 +1,11 @@
 <div class="text-sm flex flex-wrap gap-1 mt-2">
   <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
     <li>
-      <time datetime="{{ page.date | htmlDateString }}"> {{ page.date | readableDate }} </time>
+      <time datetime="{{ page.date | htmlDateString }}">
+        {{ page.date | readableDate }}
+      </time>
     </li>
-    <li> · 3 min </li>
+    <li> · {{ content | readingTime }} </li>
     <li> · Louis </li>
 
     {%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
@@ -19,6 +21,12 @@
     <a href="{{permalink}}" class="font-bold">
       permalink
       <i class="text-xs fa-solid fa-link"></i>
+    </a>
+  </div>
+  <div>|</div>
+  <div>
+    <a href="/en-US/tags/works/" class="font-bold">
+      <span class="badge">works</span>
     </a>
   </div>
 </div>

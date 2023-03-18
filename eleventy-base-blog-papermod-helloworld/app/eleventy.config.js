@@ -19,6 +19,33 @@ const translations = require('./_data/i18n');
 
 const searchFilter = require('./filters/searchFilter');
 
+const readingTime = require('eleventy-plugin-reading-time');
+
+const Image = require("@11ty/eleventy-img");
+
+// eleventy-img,  image shortcode start
+async function imageShortcode(src, alt, sizes) {
+  let metadata = await Image(src, {
+    widths: [300, 600],
+    formats: ["avif", "jpeg"]
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
+}
+// eleventy-img,  image shortcode end
+
+function helloworldShortcode(){
+  return "expanded shortcode"
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showAllHosts: true,
@@ -141,6 +168,10 @@ module.exports = function (eleventyConfig) {
   // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
   // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+  eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addShortcode ("helloworld", helloworldShortcode);
 
   return {
     // Control which files Eleventy will process

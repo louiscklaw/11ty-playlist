@@ -11,12 +11,13 @@
       <code>{{ post.url }}</code>
     {% endif %}
 
-    <p class="mt-4">Read Install and Update instructions here</p>
+    <p class="mt-4">{{ post.data.description }}</p>
     <div>
       <time datetime="{{ post.date | htmlDateString }}">
-        {{ post.date | readableDate("LLLL yyyy") }}
+        {{ post.data.date | readableDate("LLLL yyyy") }}
       </time>
-      · 3 min · Aditya Telange
+      ·
+
     </div>
   </div>
 </a>
