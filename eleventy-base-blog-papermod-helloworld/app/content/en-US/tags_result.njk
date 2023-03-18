@@ -18,12 +18,18 @@ eleventyComputed:
 permalink: /en-US/tags/{{ tag | slugify }}/
 ---
 
-<div class="
-  prose
-  prose-a:text
-  max-w-none">
 
-  <div class="">
+<div
+  class="
+    prose
+    max-w-none
+    flex flex-col m-auto
+    w-full lg:w-6/12
+    pt-0 lg:pt-8
+    "
+  style="min-height: calc(100vh - 60px - 100px - 100px)">
+
+  <div class="w-full">
     <h1>Tagged "{{ tag }}"</h1>
   </div>
 
@@ -41,7 +47,7 @@ permalink: /en-US/tags/{{ tag | slugify }}/
         btn btn-active btn-ghost
         w-fit m-auto my-8
       ">
-        <span>{{ "See all tags" | i18n }}</span>
+        <span><i class="fa-solid fa-hashtag"></i> {{ "See all tags" | i18n }}</span>
       </button>
       </a>
   </div>

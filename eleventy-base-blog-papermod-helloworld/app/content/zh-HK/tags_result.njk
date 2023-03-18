@@ -22,10 +22,17 @@ permalink: /zh-HK/tags/{{ tag | slugify }}/
   {% include "public/css/chinese_spacing.css"%}
 {% endcss %}
 
-<div class="
-  prose
-  prose-a:text
-  max-w-none">
+
+<div
+  class="
+    prose
+    max-w-none
+    flex flex-col m-auto
+    w-full lg:w-6/12
+    pt-0 lg:pt-8
+    "
+  style="min-height: calc(100vh - 60px - 100px - 100px)">
+
 
   <div class="">
     <h1 lang='zh'>標纖咗 "{{ tag }}"</h1>
@@ -45,7 +52,7 @@ permalink: /zh-HK/tags/{{ tag | slugify }}/
         btn btn-active btn-ghost
         w-fit m-auto my-8
       ">
-        <span>{{ "See all tags" | i18n }}</span>
+        <span><i class="fa-solid fa-hashtag"></i> {{ "See all tags" | i18n }}</span>
       </button>
       </a>
   </div>
