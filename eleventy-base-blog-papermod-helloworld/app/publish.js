@@ -4,7 +4,7 @@ ghpages.publish(
   '_site',
   {
     branch: 'master',
-    repo: 'https://github.com/louiscklaw/portfolio-11ty.git',
+    repo: 'git@github.com:louiscklaw/eleventy-playlist.git',
   },
   function (err) {
     console.log(err);
