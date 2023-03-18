@@ -4,6 +4,8 @@ date : 2023-01-23
 draft : false
 listCollection: 'politics'
 lang: 'zh'
+tags:
+  - blog
 ---
 
 # 这是中文文本。

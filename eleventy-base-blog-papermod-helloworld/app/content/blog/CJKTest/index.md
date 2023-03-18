@@ -2,7 +2,9 @@
 title: 待進變果沒致友環健問水法代人苦天。
 description: This is a post on My Blog about touchpoints and circling wagons.
 date: 2018-09-30
-tags: second tag
+tags:
+  - second tag
+  - blog
 ---
 
 待進變果沒致友環健問水法代人苦天。
