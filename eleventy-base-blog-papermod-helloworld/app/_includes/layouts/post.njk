@@ -17,57 +17,104 @@ layout: layouts/base.njk
     <div class="
       flex
       flex-col lg:flex-row
-      gap-8
       ">
 
-      <div
-        class="
-          w-full lg:max-w-screen-lg
-          break-all
-          prose max-w-none
-          prose-code:bg-slate-200
-          prose-code:rounded
-          prose-h3:font-bold
-          prose-h3:leading-none
-          prose-img:my-0
-          prose-img:rounded
-          prose-li:pl-0
-          prose-p:before:content-['']
-          prose-a:no-underline
-          prose-a:hover:underline
-          "
-      >
-        <div class="pt-4">
-          {% include 'components/title.njk' %}
-        </div>
-        <div class="pt-4">
-          {% include 'components/post_meta.njk' %}
+      {% if show_toc==true %}
+        <div
+          class="
+            w-full lg:w-9/12
+            break-all
+            prose max-w-none
+            prose-code:bg-slate-200
+            prose-code:rounded
+            prose-h3:font-bold
+            prose-h3:leading-none
+            prose-img:my-0
+            prose-img:rounded
+            prose-li:pl-0
+            prose-p:before:content-['']
+            prose-a:no-underline
+            prose-a:hover:underline
+            mx-4
+            "
+        >
+          <div class="pt-4">
+            {% include 'components/title.njk' %}
+          </div>
+          <div class="pt-4">
+            {% include 'components/post_meta.njk' %}
+          </div>
+
+          <div class="pt-12 lg:pt-12 prose-ul:pl-4">
+            {% if lang=='zh' %}
+              {% css %}
+                {% include "public/css/chinese_spacing.css" %}
+              {% endcss %}
+
+              <div lang="zh">
+                {{ content | safe }}
+              </div>
+            {% else %}
+              <div>
+                {{ content | safe }}
+              </div>
+            {% endif %}
+          </div>
         </div>
 
-        <div class="pt-12 lg:pt-12 prose-ul:pl-4">
-          {% if lang=='zh' %}
-            {% css %}
-              {% include "public/css/chinese_spacing.css" %}
-            {% endcss %}
 
-            <div lang="zh">
-              {{ content | safe }}
-            </div>
-          {% else %}
-            <div>
-              {{ content | safe }}
-            </div>
-          {% endif %}
+        <div class="
+          w-full lg:basis-3/12
+          order-first
+          md:order-last
+          mx-4
+          ">
+          {% include 'components/toc.njk' %}
         </div>
-      </div>
 
-      <div class="
-        basis-1/4
-        order-first
-        md:order-last
-        ">
-        {% include 'components/toc.njk' %}
-      </div>
+      {% else %}
+        <div
+          class="
+            w-8/12 lg:max-w-screen-md
+            m-auto
+            prose max-w-none
+            prose-code:bg-slate-200
+            prose-code:rounded
+            prose-h3:font-bold
+            prose-h3:leading-none
+            prose-img:my-0
+            prose-img:rounded
+            prose-li:pl-0
+            prose-p:before:content-['']
+            prose-a:no-underline
+            prose-a:hover:underline
+            break-all
+            "
+        >
+          <div class="pt-4">
+            {% include 'components/title.njk' %}
+          </div>
+          <div class="pt-4">
+            {% include 'components/post_meta.njk' %}
+          </div>
+
+          <div class="pt-12 lg:pt-12 prose-ul:pl-4">
+            {% if lang=='zh' %}
+              {% css %}
+                {% include "public/css/chinese_spacing.css" %}
+              {% endcss %}
+
+              <div lang="zh">
+                {{ content | safe }}
+              </div>
+            {% else %}
+              <div>
+                {{ content | safe }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </article>
 
