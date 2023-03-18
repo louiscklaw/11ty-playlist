@@ -1,4 +1,6 @@
 ---
+layout: layouts/home.njk
+
 pagination:
   data: collections
   size: 1
@@ -9,9 +11,10 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: layouts/home.njk
+
 eleventyComputed:
   title: Tagged “{{ tag }}”
+
 permalink: /tags/{{ tag | slugify }}/
 ---
 

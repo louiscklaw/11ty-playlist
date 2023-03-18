@@ -26,8 +26,12 @@ layout: layouts/base.njk
 
   <div class="flex flex-row justify-center text-center">
     <div class="prose">
-      <h1 class="text-xl lg:text-3xl" id="greetings">Hi, I am louis</h1>
-      <h2 class="text-base lg:text-2xl font-normal">a validation engineer</h2>
+      <h1 class="text-xl lg:text-3xl" id="greetings">
+        Hi, I am louis
+      </h1>
+      <h2 class="text-base lg:text-2xl font-normal">
+        a validation engineer
+      </h2>
     </div>
   </div>
 
@@ -35,7 +39,9 @@ layout: layouts/base.njk
     <a href="//github.com/louiscklaw" target="_blank">
       <i class="fa-brands fa-github"></i>
     </a>
-    <a href="//www.linkedin.com/in/louiscklaw" target="_blank"> <i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="//www.linkedin.com/in/louiscklaw" target="_blank">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
     <a href="//t.me/louislabs" target="_blank">
       <i class="fa-brands fa-telegram"></i>
     </a>
@@ -45,11 +51,15 @@ layout: layouts/base.njk
   </div>
 
   <div class="flex flex-row justify-center text-center text-3xl gap-4">
-    <a href="/works">
-      <button class="btn btn-active btn-ghost">{{ "Works" | i18n }}</button>
+    <a href="{{ "/works" | locale_url }}">
+      <button class="btn btn-active btn-ghost">
+        {{ "Works" | i18n }}
+      </button>
     </a>
-    <a href="/tags">
-      <button class="btn btn-active btn-ghost">{{ "Tags" | i18n }}</button>
+    <a href="{{ "/tags" | locale_url }}">
+      <button class="btn btn-active btn-ghost">
+        {{ "Tags" | i18n }}
+      </button>
     </a>
   </div>
 

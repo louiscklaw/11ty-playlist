@@ -17,10 +17,17 @@ layout: layouts/base.njk
       <div class="pt-4"> {% include 'components/post_meta.njk' %} </div>
 
       <div class="pt-12 lg:pt-12 prose-ul:pl-4">
-        {% if lang=='zh' %} {% css %} {% include "public/css/chinese_spacing.css" %} {% endcss %}
+        {% if lang=='zh' %}
+          {% css %}
+            {% include "public/css/chinese_spacing.css" %}
+          {% endcss %}
 
-        <div lang="zh"> {{ content | safe }} </div>
-        {% else %} {{ content | safe }} {% endif %}
+          <div lang="zh">
+            {{ content | safe }}
+          </div>
+        {% else %}
+          {{ content | safe }}
+        {% endif %}
       </div>
     </div>
   </article>
