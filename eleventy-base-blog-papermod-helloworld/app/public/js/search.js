@@ -24,6 +24,7 @@
 
       if (results) {
         // show result
+        resEl.style.display = 'block';
         noResultsEl.style.display = 'none';
         resTitleEl.style.display='block'
 
