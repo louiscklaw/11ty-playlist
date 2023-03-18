@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="" dir="" data-theme="emerald">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation | Update</title>
+    <meta name="description" content="Hello, I am louis law and this is my portfolio">
+
+    <link rel="preconnect" href="https://example.com">
+
+    <link rel="alternate" href="/portfolio-11ty/feed/feed.xml" type="application/atom+xml" title="louiscklaw">
+    <link rel="alternate" href="/portfolio-11ty/feed/feed.json" type="application/json" title="louiscklaw">
+
+    
+
+<script src="https://browser.sentry-cdn.com/7.43.0/bundle.tracing.min.js" integrity="sha384-XrtsNPpOZ+ul39uZL5FBdv8ByR9EAoDxyx2pnT9+txkfvq1oqUSD6jWO+Qjj67LD" crossorigin="anonymous"></script>
+
+<script>
+  Sentry.init({
+    dsn: "https://87f86bb1f70549aca9a36d7f63965ff7@o1234273.ingest.sentry.io/4504852838875136",
+    integrations: [new Sentry.BrowserTracing()],
+
+
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production
+    tracesSampleRate: 1.0,
+  });
+
+  myUndefinedFunction();
+
+</script>
+
+
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+</style>
+
+
+    <style>
+      /* Only include the syntax highlighter CSS on blog posts */ /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+ /*
+ * New diff- syntax
+ */
+
+pre[class*='language-diff-'] {
+  --eleventy-code-padding: 1.25em;
+  padding-left: var(--eleventy-code-padding);
+  padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+  background-color: hsl(0, 51%, 37%);
+  color: inherit;
+}
+.token.inserted {
+  background-color: hsl(126, 31%, 39%);
+  color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+  width: var(--eleventy-code-padding);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
+  margin-left: calc(-1 * var(--eleventy-code-padding));
+  margin-right: calc(-1 * var(--eleventy-code-padding));
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+ .youtube {
+  width: calc(100vw - 2rem);
+  min-height: calc((100vw - 2rem) / 16 * 9);
+}
+@media screen and (min-width: 768px) {
+  .youtube {
+    width: 33vw;
+    min-height: 18.5625vw;
+  }
+}
+
+/*# sourceMappingURL=youtube.css.map */
+ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+.toc ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+.toc ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.toc ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme=dracula] .toc {
+  background-color: rgb(127, 140, 141);
+}
+
+/*# sourceMappingURL=toc.css.map */
+* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+      
+
+/*# sourceMappingURL=custom.css.map */
+
+      .tag-card {
+  background-color: rgba(44, 62, 80, 0.1);
+}
+
+[data-theme=dracula] .tag-card {
+  border: solid 1px rgba(236, 240, 241, 0.2);
+  background-color: rgb(44, 62, 80);
+}
+
+/*# sourceMappingURL=cust_theme.css.map */
+
+      .nav-buttons {
+  background-color: rgb(236, 240, 241);
+}
+
+[data-theme=dracula] .nav-buttons {
+  background-color: rgba(236, 240, 241, 0.1);
+}
+[data-theme=dracula] .nav-buttons .nav-button-text {
+  color: rgb(236, 240, 241);
+}
+[data-theme=dracula] .nav-buttons .nav-button-icon {
+  color: rgb(236, 240, 241);
+}
+
+/*# sourceMappingURL=bottom_nav.css.map */
+
+      
+
+/*# sourceMappingURL=helloworld.css.map */
+
+      .palette {
+  color: hsla(var(--bc)/var(--tw-text-opacity, 1));
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity, 1));
+}
+
+[data-theme=dracula] .palette {
+  color: hsla(var(--bc)/var(--tw-text-opacity, 1));
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity, 1));
+}
+
+/*# sourceMappingURL=palette.css.map */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+    </style>
+
+    <meta name="google-site-verification" content="go0904i1ILUz_g0MtA2-eR1Gxco9GfqVbyeTbik344E">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  </head>
+
+  <body class="antialiased">
+    <div class="palette" style="width:0px;height:0px;"></div>
+
+    <div class="p-4 flex flex-col" style="min-height: calc(100vh - 60px)">
+      <div class="grow">
+        <header class="w-full lg:w-8/12 m-auto flex-none">
+  <div class="flex flex-row flex-wrap content-center">
+    <div class="basis-full lg:basis-1/2">
+
+      <div class="
+        mx-4
+        flex flex-row items-center gap-7
+        ">
+
+        <div class="" style="font-size: 24px; font-weight: 700">
+          <a href="/portfolio-11ty/" class="home-link">
+            <h1>louiscklaw</h1>
+          </a>
+        </div>
+
+        <div class="block grow lg:hidden"></div>
+
+        <div class="flex flex-row items-center gap-2">
+          <div id="toggleTheme" style="cursor: pointer">
+  <div id="theme-moon-icon">
+    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </div>
+
+
+  <div id="theme-sun-icon">
+    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </div>
+</div>
+
+<script>
+  let curr_theme = localStorage.getItem('curr_theme') || "light";
+
+  function changeThemeLight(){
+    console.log('changeThemeLight')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'emerald';
+
+    document.querySelector('#theme-sun-icon').style.display="none"
+    document.querySelector('#theme-moon-icon').style.display="block"
+  }
+
+  function changeThemeDark(){
+    console.log('changeThemeDark')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'dracula';
+
+    document.querySelector('#theme-sun-icon').style.display="block"
+    document.querySelector('#theme-moon-icon').style.display="none"
+  }
+
+  function toggleTheme(){
+    if (curr_theme == 'light'){
+      curr_theme="dark"
+      changeThemeDark()
+    }else{
+      curr_theme="light"
+      changeThemeLight()
+    }
+    console.log('save toggle theme')
+    localStorage.setItem('curr_theme', curr_theme);
+
+  }
+
+  const button = document.querySelector("#toggleTheme");
+  button.addEventListener("click", toggleTheme);
+
+  
+  if (curr_theme == 'dark'){
+    changeThemeDark()
+  }else{
+    changeThemeLight()
+  }
+
+</script>
+
+          <div class="hidden text-bases">
+  <div class="border border-l-indigo-500 text-base h-[2rem]"></div>
+</div>
+
+<div class="hidden text-bases">
+  
+  <ul class="flex flex-row justify-center items-center gap-1">
+    <li>
+      <a href="/portfolio-11ty/en-US/" title="english" aria-label=":us:">
+        <i class="fa-solid fa-language"></i>
+        <span>US</span>
+      </a>
+    </li>
+  </ul>
+  
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="basis-full lg:basis-1/2 items-center flex flex-row justify-start lg:justify-end">
+      <nav class="w-full lg:w-fit">
+  <h2 class="visually-hidden">Top navigation menu</h2>
+
+  <ul class="
+    w-full
+    flex flex-row flex-wrap
+    gap-12 lg:gap-6
+    justify-center lg:justify-end
+    pt-8 lg:pt-0
+    ">
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/works/">
+        Works
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/search/">
+        Search
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/tags/">
+        Tags
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="//share.louislabs.com/upload">
+        Upload
+      </a>
+    </li>
+
+    
+  </ul>
+</nav>
+
+    </div>
+  </div>
+
+  <div style="display: none">
+  <nav>
+    <h2 class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+        <li class="nav-item">
+          <a href="/portfolio-11ty/en-US/works/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/works/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/zh-HK/works/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/blog/">
+            Archive
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/about/">
+            About Me
+          </a>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+</header>
+
+
+        <main id="skip" class="mt-8 lg:mt-20">
+          
+
+<div class="
+  flex flex-col
+  w-full lg:w-9/12 lg:m-auto
+  pt-0 lg:pt-8" style="min-height: calc(100vh - 60px - 100px - 100px)">
+
+  <article class="grow">
+    <div class="
+      flex
+      flex-col lg:flex-row
+      ">
+
+      
+        <div class="
+            w-full lg:w-9/12
+            break-all
+            prose max-w-none
+            prose-code:bg-slate-200
+            prose-code:rounded
+            prose-h3:font-bold
+            prose-h3:leading-none
+            prose-img:my-0
+            prose-img:rounded
+            prose-li:pl-0
+            prose-p:before:content-['']
+            prose-a:no-underline
+            prose-a:hover:underline
+            mx-4
+            ">
+          <div class="pt-4">
+            <h1 class="m-0 text-2xl lg:text-4xl"> Installation | Update </h1>
+
+          </div>
+          <div class="pt-4">
+            <div class="text-sm flex flex-wrap gap-1 mt-2">
+  <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+    <li>
+      <time datetime="2023-01-23"> 23 January 2023 </time>
+    </li>
+    <li> · 3 min </li>
+    <li> · Louis </li>
+  </ul>
+  <div>|</div>
+  <div>
+    <a href="//github.com/louiscklaw/./content/blog/installation.md" class="font-bold">
+      source
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
+    <a href="." class="font-bold">
+      permalink
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
+  </div>
+</div>
+
+          </div>
+
+          <div class="pt-12 lg:pt-12 prose-ul:pl-4">
+            
+              <div>
+                <h2 id="intro" tabindex="-1">Intro <a class="header-anchor" href="#intro">#</a></h2>
+<ul>
+<li><strong>We'll be using <code>yml/yaml</code> format for all examples down below, I recommend using <code>yml</code> over <code>toml</code> as it is easier to read.</strong></li>
+<li>You can find any <a href="https://www.google.com/search?q=yml+to+toml">YML to TOML</a> converters if necessary.</li>
+</ul>
+<hr>
+<h2 id="guide" tabindex="-1">Guide <a class="header-anchor" href="#guide">#</a></h2>
+<p>Follow <a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> guide to setup <img class="inline h-4" src="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png"> and create a new site.</p>
+<p>Higher resolution means more than just a better-quality image. With a Retina
+6K display, <a class="text-blue-600 after:content-['']" href="https://www.
+apple.com/pro-display-xdr/" target="_blank">Pro Display XDR</a> gives you
+nearly 40 percent more screen real estate than a 5K display.</p>
+<blockquote>
+<p>Note: Use -f to select yml format</p>
+<p><code>hugo new site &lt;name of site&gt; -f yml</code></p>
+</blockquote>
+<p>Make sure you install latest version of <strong><code>hugo(&gt;=0.83.0)</code></strong>.</p>
+<p>After you have created a new site, at <a href="https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme">Step 3</a> follow the steps:</p>
+<h3 id="method-1" tabindex="-1">Method 1 <a class="header-anchor" href="#method-1">#</a></h3>
+<p>Inside the folder of your Hugo site, run:</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span></code></pre>
+<p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<blockquote>
+<p>Updating theme :</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token builtin class-name">cd</span> themes/PaperMod<br><span class="token function">git</span> pull</code></pre>
+</blockquote>
+<h3 id="method-2" tabindex="-1">Method 2 <a class="header-anchor" href="#method-2">#</a></h3>
+<p>you can use as <a href="https://www.atlassian.com/git/tutorials/git-submodule">submodule</a> with</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> submodule <span class="token function">add</span> <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod<br><span class="token function">git</span> submodule update <span class="token parameter variable">--init</span> <span class="token parameter variable">--recursive</span> <span class="token comment"># needed when you reclone your repo (submodules may not get cloned automatically)</span></code></pre>
+<p><strong>Note</strong>: You may use <code> --branch v5.0</code> to end of above command if you want to stick to specific release.</p>
+<blockquote>
+<p>Updating theme :</p>
+<pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token function">git</span> submodule update <span class="token parameter variable">--remote</span> <span class="token parameter variable">--merge</span></code></pre>
+</blockquote>
+<h3 id="method-3" tabindex="-1">Method 3 <a class="header-anchor" href="#method-3">#</a></h3>
+<p>Or you can Download as Zip from Github Page and extract in your themes directory</p>
+<p>Direct Links:</p>
+<ul>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/master.zip">Master Branch (Latest)</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v6.0.zip">v6.0</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v5.0.zip">v5.0</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v4.0.zip">v4.0</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v3.0.zip">v3.0</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v2.0.zip">v2.0</a></li>
+<li><a href="https://github.com/adityatelange/hugo-PaperMod/archive/v1.0.zip">v1.0</a></li>
+</ul>
+<h3 id="method-4" tabindex="-1">Method 4 <a class="header-anchor" href="#method-4">#</a></h3>
+<ul>
+<li>
+<p>Install <a href="https://go.dev/doc/install">Go programming language</a> in your operating system.</p>
+</li>
+<li>
+<p>Intialize your own hugo mod</p>
+</li>
+</ul>
+<pre class="language-bash" tabindex="0"><code class="language-bash">hugo mod init YOUR_OWN_GIT_REPOSITORY</code></pre>
+<ul>
+<li>Add PaperMod in your <code>config.yml</code> file</li>
+</ul>
+<pre class="language-yml" tabindex="0"><code class="language-yml"><span class="token key atrule">module</span><span class="token punctuation">:</span><br>  <span class="token key atrule">imports</span><span class="token punctuation">:</span><br>  <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> github.com/adityatelange/hugo<span class="token punctuation">-</span>PaperMod</code></pre>
+<ul>
+<li>Update theme</li>
+</ul>
+<pre class="language-bash" tabindex="0"><code class="language-bash">hugo mod get <span class="token parameter variable">-u</span></code></pre>
+<h3 id="finally" tabindex="-1">Finally ... <a class="header-anchor" href="#finally">#</a></h3>
+<p>Add in <code>config.yml</code>:</p>
+<pre class="language-yml" tabindex="0"><code class="language-yml"><span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">"PaperMod"</span></code></pre>
+<hr>
+<h2 id="videos-featuring-papermod" tabindex="-1">Videos featuring Papermod <a class="header-anchor" href="#videos-featuring-papermod">#</a></h2>
+<p>You can go through few videos which are available on YouTube for getting to know the creator's thoughts as well as the setup process.</p>
+<p>▶️ https://youtube.com/playlist?list=PLeiDFxcsdhUrzkK5Jg9IZyiTsIMvXxKZP</p>
+<iframe class="rounded youtube" src="https://www.youtube.com/embed/XkNpbV4JtcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+<hr>
+<h2 id="quick-links" tabindex="-1">Quick Links <a class="header-anchor" href="#quick-links">#</a></h2>
+<ul>
+<li>
+<h3 id="papermod-features" tabindex="-1"><a href="../papermod-features">Papermod - Features</a> <a class="header-anchor" href="#papermod-features">#</a></h3>
+</li>
+<li>
+<h3 id="papermod-faqs" tabindex="-1"><a href="../papermod-how-to">Papermod - FAQs</a> <a class="header-anchor" href="#papermod-faqs">#</a></h3>
+</li>
+<li>
+<h3 id="papermod-variables" tabindex="-1"><a href="../papermod-variables">Papermod - Variables</a> <a class="header-anchor" href="#papermod-variables">#</a></h3>
+</li>
+<li>
+<h3 id="papermod-icons" tabindex="-1"><a href="../papermod-icons">Papermod - Icons</a> <a class="header-anchor" href="#papermod-icons">#</a></h3>
+</li>
+<li>
+<h3 id="changelog" tabindex="-1"><a href="https://github.com/adityatelange/hugo-PaperMod/releases">ChangeLog</a> <a class="header-anchor" href="#changelog">#</a></h3>
+</li>
+</ul>
+<hr>
+<h2 id="sample-config-yml" tabindex="-1">Sample <code>config.yml</code> <a class="header-anchor" href="#sample-config-yml">#</a></h2>
+<blockquote>
+<p><strong>Example Site Structure is present here</strong>: <a href="https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/">exampleSite</a></p>
+</blockquote>
+<p><strong>Use appropriately</strong></p>
+<pre class="language-yml" tabindex="0"><code class="language-yml"><span class="token key atrule">baseURL</span><span class="token punctuation">:</span> <span class="token string">"https://examplesite.com/"</span><br><span class="token key atrule">title</span><span class="token punctuation">:</span> ExampleSite<br><span class="token key atrule">paginate</span><span class="token punctuation">:</span> <span class="token number">5</span><br><span class="token key atrule">theme</span><span class="token punctuation">:</span> PaperMod<br><br><span class="token key atrule">enableRobotsTXT</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">buildDrafts</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">buildFuture</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">buildExpired</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><br><span class="token key atrule">googleAnalytics</span><span class="token punctuation">:</span> UA<span class="token punctuation">-</span>123<span class="token punctuation">-</span><span class="token number">45</span><br><br><span class="token key atrule">minify</span><span class="token punctuation">:</span><br>  <span class="token key atrule">disableXML</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">minifyOutput</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><br><span class="token key atrule">params</span><span class="token punctuation">:</span><br>  <span class="token key atrule">env</span><span class="token punctuation">:</span> production <span class="token comment"># to enable google analytics, opengraph, twitter-cards and schema.</span><br>  <span class="token key atrule">title</span><span class="token punctuation">:</span> ExampleSite<br>  <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"ExampleSite description"</span><br>  <span class="token key atrule">keywords</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Blog<span class="token punctuation">,</span> Portfolio<span class="token punctuation">,</span> PaperMod<span class="token punctuation">]</span><br>  <span class="token key atrule">author</span><span class="token punctuation">:</span> Me<br>  <span class="token comment"># author: ["Me", "You"] # multiple authors</span><br>  <span class="token key atrule">images</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"&lt;link or path of image for opengraph, twitter-cards>"</span><span class="token punctuation">]</span><br>  <span class="token key atrule">DateFormat</span><span class="token punctuation">:</span> <span class="token string">"January 2, 2006"</span><br>  <span class="token key atrule">defaultTheme</span><span class="token punctuation">:</span> auto <span class="token comment"># dark, light</span><br>  <span class="token key atrule">disableThemeToggle</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><br>  <span class="token key atrule">ShowReadingTime</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">ShowShareButtons</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">ShowPostNavLinks</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">ShowBreadCrumbs</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">ShowCodeCopyButtons</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">ShowWordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">ShowRssButtonInSectionTermList</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">UseHugoToc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>  <span class="token key atrule">disableSpecial1stPost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">disableScrollToTop</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">hidemeta</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">hideSummary</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">showtoc</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>  <span class="token key atrule">tocopen</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><br>  <span class="token key atrule">assets</span><span class="token punctuation">:</span><br>    <span class="token comment"># disableHLJS: true # to disable highlight.js</span><br>    <span class="token comment"># disableFingerprinting: true</span><br>    <span class="token key atrule">favicon</span><span class="token punctuation">:</span> <span class="token string">"&lt;link / abs url>"</span><br>    <span class="token key atrule">favicon16x16</span><span class="token punctuation">:</span> <span class="token string">"&lt;link / abs url>"</span><br>    <span class="token key atrule">favicon32x32</span><span class="token punctuation">:</span> <span class="token string">"&lt;link / abs url>"</span><br>    <span class="token key atrule">apple_touch_icon</span><span class="token punctuation">:</span> <span class="token string">"&lt;link / abs url>"</span><br>    <span class="token key atrule">safari_pinned_tab</span><span class="token punctuation">:</span> <span class="token string">"&lt;link / abs url>"</span><br><br>  <span class="token key atrule">label</span><span class="token punctuation">:</span><br>    <span class="token key atrule">text</span><span class="token punctuation">:</span> <span class="token string">"Home"</span><br>    <span class="token key atrule">icon</span><span class="token punctuation">:</span> /apple<span class="token punctuation">-</span>touch<span class="token punctuation">-</span>icon.png<br>    <span class="token key atrule">iconHeight</span><span class="token punctuation">:</span> <span class="token number">35</span><br><br>  <span class="token comment"># profile-mode</span><br>  <span class="token key atrule">profileMode</span><span class="token punctuation">:</span><br>    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># needs to be explicitly set</span><br>    <span class="token key atrule">title</span><span class="token punctuation">:</span> ExampleSite<br>    <span class="token key atrule">subtitle</span><span class="token punctuation">:</span> <span class="token string">"This is subtitle"</span><br>    <span class="token key atrule">imageUrl</span><span class="token punctuation">:</span> <span class="token string">"&lt;img location>"</span><br>    <span class="token key atrule">imageWidth</span><span class="token punctuation">:</span> <span class="token number">120</span><br>    <span class="token key atrule">imageHeight</span><span class="token punctuation">:</span> <span class="token number">120</span><br>    <span class="token key atrule">imageTitle</span><span class="token punctuation">:</span> my image<br>    <span class="token key atrule">buttons</span><span class="token punctuation">:</span><br>      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Posts<br>        <span class="token key atrule">url</span><span class="token punctuation">:</span> posts<br>      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Tags<br>        <span class="token key atrule">url</span><span class="token punctuation">:</span> tags<br><br>  <span class="token comment"># home-info mode</span><br>  <span class="token key atrule">homeInfoParams</span><span class="token punctuation">:</span><br>    <span class="token key atrule">Title</span><span class="token punctuation">:</span> <span class="token string">"Hi there \U0001F44B"</span><br>    <span class="token key atrule">Content</span><span class="token punctuation">:</span> Welcome to my blog<br><br>  <span class="token key atrule">socialIcons</span><span class="token punctuation">:</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> twitter<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"https://twitter.com/"</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> stackoverflow<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"https://stackoverflow.com"</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> github<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"https://github.com/"</span><br><br>  <span class="token key atrule">analytics</span><span class="token punctuation">:</span><br>    <span class="token key atrule">google</span><span class="token punctuation">:</span><br>      <span class="token key atrule">SiteVerificationTag</span><span class="token punctuation">:</span> <span class="token string">"XYZabc"</span><br>    <span class="token key atrule">bing</span><span class="token punctuation">:</span><br>      <span class="token key atrule">SiteVerificationTag</span><span class="token punctuation">:</span> <span class="token string">"XYZabc"</span><br>    <span class="token key atrule">yandex</span><span class="token punctuation">:</span><br>      <span class="token key atrule">SiteVerificationTag</span><span class="token punctuation">:</span> <span class="token string">"XYZabc"</span><br><br>  <span class="token key atrule">cover</span><span class="token punctuation">:</span><br>    <span class="token key atrule">hidden</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># hide everywhere but not in structured data</span><br>    <span class="token key atrule">hiddenInList</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># hide on list pages and home</span><br>    <span class="token key atrule">hiddenInSingle</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># hide on single page</span><br><br>  <span class="token key atrule">editPost</span><span class="token punctuation">:</span><br>    <span class="token key atrule">URL</span><span class="token punctuation">:</span> <span class="token string">"https://github.com/&lt;path_to_repo>/content"</span><br>    <span class="token key atrule">Text</span><span class="token punctuation">:</span> <span class="token string">"Suggest Changes"</span> <span class="token comment"># edit text</span><br>    <span class="token key atrule">appendFilePath</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># to append file path to Edit link</span><br><br>  <span class="token comment"># for search</span><br>  <span class="token comment"># https://fusejs.io/api/options.html</span><br>  <span class="token key atrule">fuseOpts</span><span class="token punctuation">:</span><br>    <span class="token key atrule">isCaseSensitive</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>    <span class="token key atrule">shouldSort</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br>    <span class="token key atrule">location</span><span class="token punctuation">:</span> <span class="token number">0</span><br>    <span class="token key atrule">distance</span><span class="token punctuation">:</span> <span class="token number">1000</span><br>    <span class="token key atrule">threshold</span><span class="token punctuation">:</span> <span class="token number">0.4</span><br>    <span class="token key atrule">minMatchCharLength</span><span class="token punctuation">:</span> <span class="token number">0</span><br>    <span class="token key atrule">keys</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"title"</span><span class="token punctuation">,</span> <span class="token string">"permalink"</span><span class="token punctuation">,</span> <span class="token string">"summary"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">]</span><br><span class="token key atrule">menu</span><span class="token punctuation">:</span><br>  <span class="token key atrule">main</span><span class="token punctuation">:</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">identifier</span><span class="token punctuation">:</span> categories<br>      <span class="token key atrule">name</span><span class="token punctuation">:</span> categories<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> /categories/<br>      <span class="token key atrule">weight</span><span class="token punctuation">:</span> <span class="token number">10</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">identifier</span><span class="token punctuation">:</span> tags<br>      <span class="token key atrule">name</span><span class="token punctuation">:</span> tags<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> /tags/<br>      <span class="token key atrule">weight</span><span class="token punctuation">:</span> <span class="token number">20</span><br>    <span class="token punctuation">-</span> <span class="token key atrule">identifier</span><span class="token punctuation">:</span> example<br>      <span class="token key atrule">name</span><span class="token punctuation">:</span> example.org<br>      <span class="token key atrule">url</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//example.org<br>      <span class="token key atrule">weight</span><span class="token punctuation">:</span> <span class="token number">30</span><br><span class="token comment"># Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma</span><br><span class="token key atrule">pygmentsUseClasses</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">markup</span><span class="token punctuation">:</span><br>  <span class="token key atrule">highlight</span><span class="token punctuation">:</span><br>    <span class="token key atrule">noClasses</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br>    <span class="token comment"># anchorLineNos: true</span><br>    <span class="token comment"># codeFences: true</span><br>    <span class="token comment"># guessSyntax: true</span><br>    <span class="token comment"># lineNos: true</span><br>    <span class="token comment"># style: monokai</span></code></pre>
+<hr>
+<h2 id="sample-page-md" tabindex="-1">Sample <code>Page.md</code> <a class="header-anchor" href="#sample-page-md">#</a></h2>
+<pre class="language-yml" tabindex="0"><code class="language-yml"><span class="token punctuation">---</span><br><span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"My 1st post"</span><br><span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2020-09-15T11:30:03+00:00</span><br><span class="token comment"># weight: 1</span><br><span class="token comment"># aliases: ["/first"]</span><br><span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"first"</span><span class="token punctuation">]</span><br><span class="token key atrule">author</span><span class="token punctuation">:</span> <span class="token string">"Me"</span><br><span class="token comment"># author: ["Me", "You"] # multiple authors</span><br><span class="token key atrule">showToc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">TocOpen</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">draft</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">hidemeta</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">comments</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">"Desc Text."</span><br><span class="token key atrule">canonicalURL</span><span class="token punctuation">:</span> <span class="token string">"https://canonical.url/to/page"</span><br><span class="token key atrule">disableHLJS</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># to disable highlightjs</span><br><span class="token key atrule">disableShare</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">disableHLJS</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">hideSummary</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><br><span class="token key atrule">searchHidden</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">ShowReadingTime</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">ShowBreadCrumbs</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">ShowPostNavLinks</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">ShowWordCount</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">ShowRssButtonInSectionTermList</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">UseHugoToc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><br><span class="token key atrule">cover</span><span class="token punctuation">:</span><br>    <span class="token key atrule">image</span><span class="token punctuation">:</span> <span class="token string">"&lt;image path/url>"</span> <span class="token comment"># image path/url</span><br>    <span class="token key atrule">alt</span><span class="token punctuation">:</span> <span class="token string">"&lt;alt text>"</span> <span class="token comment"># alt text</span><br>    <span class="token key atrule">caption</span><span class="token punctuation">:</span> <span class="token string">"&lt;text>"</span> <span class="token comment"># display caption under cover</span><br>    <span class="token key atrule">relative</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># when using page bundles set this to true</span><br>    <span class="token key atrule">hidden</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># only hide on current single page</span><br><span class="token key atrule">editPost</span><span class="token punctuation">:</span><br>    <span class="token key atrule">URL</span><span class="token punctuation">:</span> <span class="token string">"https://github.com/&lt;path_to_repo>/content"</span><br>    <span class="token key atrule">Text</span><span class="token punctuation">:</span> <span class="token string">"Suggest Changes"</span> <span class="token comment"># edit text</span><br>    <span class="token key atrule">appendFilePath</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># to append file path to Edit link</span><br><span class="token punctuation">---</span></code></pre>
+<p>You can use it by creating <code>archetypes/post.md</code></p>
+<pre class="language-shell" tabindex="0"><code class="language-shell">hugo new <span class="token parameter variable">--kind</span> post <span class="token operator">&lt;</span>name<span class="token operator">></span></code></pre>
+<hr>
+<h1>業立臺四即文善公作有往，等怕準命小電個。</h1>
+<h2>査今聞光洋後化外財強主職。</h2>
+<h3>待進變果沒致友環健問水法代人苦天。</h3>
+<p><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt=""></p>
+<p>待進變 <strong>果沒致友</strong> 環健問水法代人苦天。
+業立臺四即文 <em>善公作有</em> 往，等怕 <em><strong>準命</strong></em> 小電個。
+査今聞光洋 <a href="www.google.com">後化外財</a> 強主職。</p>
+<p>待進變 <strong>果沒致友</strong> 環健問水法代人苦天。
+業立臺四即文 <em>善公作有</em> 往，等怕 <em><strong>準命</strong></em> 小電個。
+査今聞光洋後化外財強主職。</p>
+<blockquote>
+<p>待進變 <strong>果沒致友</strong> 環健問水法代人苦天。
+業立臺四即文 <em>善公作有</em> 往，等怕 <em><strong>準命</strong></em> 小電個。
+査今聞光洋後化外財強主職。</p>
+</blockquote>
+<hr>
+
+              </div>
+            
+          </div>
+        </div>
+
+
+        <div class="
+          w-full lg:basis-3/12
+          order-first
+          md:order-last
+          mx-4
+          ">
+          
+
+
+  <div class="
+    toc
+    sticky
+    top-0
+    rounded-xl
+    p-4
+    " style="cursor: pointer">
+
+    
+    <details class="
+      block lg:hidden
+    ">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#intro">Intro #</a>
+            		</li>
+
+                    <li><a href="#guide">Guide #</a>
+            
+                <ol>
+                    
+                    <li><a href="#method-1">Method 1 #</a>
+            		</li>
+
+                    <li><a href="#method-2">Method 2 #</a>
+            		</li>
+
+                    <li><a href="#method-3">Method 3 #</a>
+            		</li>
+
+                    <li><a href="#method-4">Method 4 #</a>
+            		</li>
+
+                    <li><a href="#finally">Finally ... #</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#videos-featuring-papermod">Videos featuring Papermod #</a>
+            		</li>
+
+                    <li><a href="#quick-links">Quick Links #</a>
+            
+                <ol>
+                    
+                    <li><a href="#papermod-features">Papermod - Features #</a>
+            		</li>
+
+                    <li><a href="#papermod-faqs">Papermod - FAQs #</a>
+            		</li>
+
+                    <li><a href="#papermod-variables">Papermod - Variables #</a>
+            		</li>
+
+                    <li><a href="#papermod-icons">Papermod - Icons #</a>
+            		</li>
+
+                    <li><a href="#changelog">ChangeLog #</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#sample-config-yml">Sample config.yml #</a>
+            		</li>
+
+                    <li><a href="#sample-page-md">Sample Page.md #</a>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
+
+    
+    <details class="
+      hidden lg:block
+    " open="">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#intro">Intro #</a>
+            		</li>
+
+                    <li><a href="#guide">Guide #</a>
+            
+                <ol>
+                    
+                    <li><a href="#method-1">Method 1 #</a>
+            		</li>
+
+                    <li><a href="#method-2">Method 2 #</a>
+            		</li>
+
+                    <li><a href="#method-3">Method 3 #</a>
+            		</li>
+
+                    <li><a href="#method-4">Method 4 #</a>
+            		</li>
+
+                    <li><a href="#finally">Finally ... #</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#videos-featuring-papermod">Videos featuring Papermod #</a>
+            		</li>
+
+                    <li><a href="#quick-links">Quick Links #</a>
+            
+                <ol>
+                    
+                    <li><a href="#papermod-features">Papermod - Features #</a>
+            		</li>
+
+                    <li><a href="#papermod-faqs">Papermod - FAQs #</a>
+            		</li>
+
+                    <li><a href="#papermod-variables">Papermod - Variables #</a>
+            		</li>
+
+                    <li><a href="#papermod-icons">Papermod - Icons #</a>
+            		</li>
+
+                    <li><a href="#changelog">ChangeLog #</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#sample-config-yml">Sample config.yml #</a>
+            		</li>
+
+                    <li><a href="#sample-page-md">Sample Page.md #</a>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
+
+  </div>
+
+
+        </div>
+
+      
+    </div>
+  </article>
+
+  <div class="my-8"></div>
+
+  
+    <div class="
+      nav-buttons
+      p-4 lg:px-8 mt-2
+      rounded-xl
+      prose prose-p:mb-0 prose-h2:mb-2 max-w-none
+      ">
+      <ul class="not-prose pl-0 list-none list-outside flex gap-4 lg:gap-8 justify-between">
+        <li class="list-outside">
+          <a href="/portfolio-11ty/blog/chinese_test/" class="font-bold">
+            <div class="text-slate-500 flex gap-2 items-center justify-start">
+              <i class="nav-button-icon fa-solid fa-angles-left fa-xs"></i>
+              <span class="nav-button-text text-sm uppercase">Previous</span>
+            </div>
+            <div class="nav-text-title pt-2 lg:pt-4">我在淘寶買了BambuLabX1-CarbonCombo</div>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+
+
+  <div class="my-8"></div>
+</div>
+
+        </main>
+
+      </div>
+
+      <footer>
+  <div class="
+    py-12 lg:p-4
+    prose max-w-none
+    text-xs
+    flex flex-row justify-center items-center
+    ">
+    <div class="flex flex-col items-center gap-2">
+
+      <a href="//louiscklaw.github.io" class="flex flex-row items-center gap-1">
+        <i class="fa-regular fa-copyright"></i>
+        <div class="underline">2023 louis portfolio</div>
+      </a>
+
+      <div>
+        building on top of <a href="//github.com/adityatelange/hugo-PaperMod" target="_blank">
+          Hugo papermod
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/louiscklaw/portfolio-11ty">
+          <i class="fa-brands fa-github"></i><span class="pl-1">source</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </body>
+</html>
