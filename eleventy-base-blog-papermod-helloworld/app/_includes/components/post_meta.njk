@@ -7,10 +7,6 @@
     </li>
     <li> · {{ content | readingTime }} </li>
     <li> · Louis </li>
-
-    {%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-    <li> <a href="{{ tagUrl }}">{{ tag }}</a>{%- if not loop.last %}, {% endif %} </li>
-    {%- endfor %}
   </ul>
   <div>|</div>
   <div>
@@ -23,10 +19,20 @@
       <i class="text-xs fa-solid fa-link"></i>
     </a>
   </div>
+
   <div>|</div>
+
   <div>
-    <a href="/en-US/tags/works/" class="font-bold">
-      <span class="badge">works</span>
-    </a>
+    <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+      {%- for tag in tags | filterTagList %}
+        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+        <li>
+          <a href="{{ tagUrl }}" class="badge flex flex-row gap-1 items-center font-bold">
+            <i class="fa-solid fa-hashtag"></i>{{ tag }}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+    {# {{ content | dump }} #}
   </div>
 </div>

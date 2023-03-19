@@ -1,7 +1,7 @@
 ---
 layout: layouts/work_post.njk
 tags:
-  - works
+  - youtube
 title: youtube splitview tryout
 description: easy finder for finding the data exposed by gov.hk
 date: 2022-01-01
@@ -9,7 +9,6 @@ show_toc: true
 ---
 
 {% image "./thumbnail.avif", "photo of my cat" %}
-
 
 ## youtube splitview tryout
 
@@ -23,14 +22,9 @@ Currently revamping with gatsby
 
 ### Demo:
 
-<a href="//louiscklaw.github.io/youtube-split-view-tryout" class="flex flex-row gap-1 items-center" target="_blank" >
-  <span class="underline">https://louiscklaw.github.io/youtube-split-view-tryout</span>
-  <i class="fa-solid fa-up-right-from-square text-sm"></i>
-</a>
+{% githubLink "youtube-split-view-tryout", "//github.com/louiscklaw/youtube-split-view-tryout" %}
 
 ### References / Repositories:
 
-<a href="//afterglowplayer.com" class="flex flex-row gap-1 items-center" target="_blank">
-  <span class="underline">afterglowplayer.com</span>
-  <i class="fa-solid fa-up-right-from-square text-sm"></i>
-</a>
+{% newWindowLink "afterglowplayer.com", "//afterglowplayer.com" %}
+

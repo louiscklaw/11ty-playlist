@@ -21,42 +21,11 @@ const searchFilter = require('./filters/searchFilter');
 
 const readingTime = require('eleventy-plugin-reading-time');
 
-const Image = require("@11ty/eleventy-img");
-
-// eleventy-img,  image shortcode start
-async function imageShortcode(src, alt, sizes) {
-  let metadata = await Image(src, {
-    widths: [300, 600],
-    formats: ["avif", "jpeg"]
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
-}
-// eleventy-img,  image shortcode end
-
-function helloworldShortcode(){
-  return "expanded shortcode"
-}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     showAllHosts: true,
   });
-
-  eleventyConfig.addShortcode("user", function(firstName, lastName) {
-    return `helloworld ${firstName} ${lastName}`
-
-   });
-
-
 
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
     // any valid BCP 47-compatible language tag is supported
@@ -80,12 +49,11 @@ module.exports = function (eleventyConfig) {
   // App plugins
   eleventyConfig.addPlugin(require('./eleventy.config.drafts.js'));
   eleventyConfig.addPlugin(require('./eleventy.config.images.js'));
+  eleventyConfig.addPlugin(require('./eleventy.config.my_shortcut.js'));
 
   // Official plugins
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-    preAttributes: { tabindex: 0 },
-  });
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, { preAttributes: { tabindex: 0 }, });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(pluginBundle);
@@ -177,8 +145,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
   eleventyConfig.addPlugin(readingTime);
 
-  eleventyConfig.addAsyncShortcode("image", imageShortcode);
-  eleventyConfig.addShortcode ("helloworld", helloworldShortcode);
+  // eleventyConfig.addAsyncShortcode("image", imageShortcode);
 
   return {
     // Control which files Eleventy will process
