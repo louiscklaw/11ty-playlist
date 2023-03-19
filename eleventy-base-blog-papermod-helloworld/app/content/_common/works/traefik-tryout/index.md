@@ -8,7 +8,10 @@ date: 2022-01-01
 show_toc: true
 ---
 
-{% image "./thumbnail.avif", "photo of my cat" %}
+{% image
+  "./thumbnail.avif",
+  "photo of my cat"
+%}
 
 ## tappy tryout
 
@@ -18,7 +21,7 @@ try to make a sample of non-intrusive mobile application testing.
 
 ### References / Repositories:
 
-<a href="//louiscklaw.github.io/louiscklaw/tapsterbot" class="flex flex-row gap-1 items-center" target="_blank" >
-  <span class="underline">https://louiscklaw.github.io/louiscklaw/tapsterbot</span>
-  <i class="fa-solid fa-up-right-from-square text-sm"></i>
-</a>
+{% newWindowLink
+  "//louiscklaw.github.io/louiscklaw/tapsterbot",
+  "https://louiscklaw.github.io/louiscklaw/tapsterbot"
+%}
