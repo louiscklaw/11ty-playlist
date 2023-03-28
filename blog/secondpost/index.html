@@ -46,7 +46,8 @@
 
 
     <style>
-      /* Only include the syntax highlighter CSS on blog posts */ /**
+      /* Only include the syntax highlighter CSS on blog posts */
+  /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
  * @author ocodia
@@ -169,7 +170,8 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
- /*
+
+  /*
  * New diff- syntax
  */
 
@@ -214,7 +216,8 @@ pre[class*='language-diff-'] {
   text-decoration: none; /* override del, ins, mark defaults */
   color: inherit; /* override del, ins, mark defaults */
 }
- .youtube {
+
+  .youtube {
   width: calc(100vw - 2rem);
   min-height: calc((100vw - 2rem) / 16 * 9);
 }
@@ -429,12 +432,15 @@ pre[class*="language-"] {
 
     <div class="p-4 flex flex-col" style="min-height: calc(100vh - 60px)">
       <div class="grow">
-        <header class="w-full lg:w-8/12 m-auto flex-none">
+        <header class="
+  w-full lg:w-9/12
+  m-auto
+  flex-none
+  ">
   <div class="flex flex-row flex-wrap content-center">
     <div class="basis-full lg:basis-1/2">
-
       <div class="
-        mx-4
+        mx-4 lg:mx-0
         flex flex-row items-center gap-7
         ">
 
@@ -541,7 +547,7 @@ pre[class*="language-"] {
 
     <div class="basis-full lg:basis-1/2 items-center flex flex-row justify-start lg:justify-end">
       <nav class="w-full lg:w-fit">
-  <h2 class="visually-hidden">Top navigation menu</h2>
+  <h2 class="visually-hidden" style="display: none">Top navigation menu</h2>
 
   <ul class="
     w-full
@@ -554,6 +560,12 @@ pre[class*="language-"] {
     <li class="text-base font-bold">
       <a href="/portfolio-11ty/en-US/works/">
         Works
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/blog/">
+        Blog
       </a>
     </li>
 
@@ -587,12 +599,12 @@ pre[class*="language-"] {
     <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
         <li class="nav-item">
-          <a href="/portfolio-11ty/en-US/works/">
+          <a href="/portfolio-11ty/en-US/blog/">
             Work
           </a>
         </li>
         <li class="nav-item">
-          <a href="/portfolio-11ty/works/">
+          <a href="/portfolio-11ty/en-US/works/">
             Work
           </a>
         </li>
@@ -628,8 +640,7 @@ pre[class*="language-"] {
 
   <article class="grow">
     <div class="
-      flex
-      flex-col lg:flex-row
+      flex flex-col lg:flex-row
       ">
 
       
@@ -657,11 +668,12 @@ pre[class*="language-"] {
             <div class="text-sm flex flex-wrap gap-1 mt-2">
   <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
     <li>
-      <time datetime="2018-07-04"> 04 July 2018 </time>
+      <time datetime="2018-07-04">
+        04 July 2018
+      </time>
     </li>
-    <li> · 3 min </li>
+    <li> · 1 min </li>
     <li> · Louis </li>
-    <li> <a href="/portfolio-11ty/tags/number-2/">number 2</a> </li>
   </ul>
   <div>|</div>
   <div>
@@ -673,6 +685,24 @@ pre[class*="language-"] {
       permalink
       <i class="text-xs fa-solid fa-link"></i>
     </a>
+  </div>
+
+  <div>|</div>
+
+  <div>
+    <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+        <li>
+          <a href="/portfolio-11ty/tags/blog/" class="badge flex flex-row gap-1 items-center font-bold">
+            <i class="fa-solid fa-hashtag"></i>blog
+          </a>
+        </li>
+        <li>
+          <a href="/portfolio-11ty/tags/number-2/" class="badge flex flex-row gap-1 items-center font-bold">
+            <i class="fa-solid fa-hashtag"></i>number 2
+          </a>
+        </li>
+    </ul>
+    
   </div>
 </div>
 

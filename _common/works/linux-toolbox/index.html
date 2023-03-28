@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>louiscklaw</title>
-    <meta name="description" content="Hello, I am louis law and this is my portfolio">
+    <title>linux toolbox</title>
+    <meta name="description" content="easy finder for finding the data exposed by gov.hk">
 
     <link rel="preconnect" href="https://example.com">
 
@@ -46,30 +46,232 @@
 
 
     <style>
-      .nav-buttons {
-  background-color: rgb(236, 240, 241);
+      /* Only include the syntax highlighter CSS on blog posts */
+  /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
-.worklist-card {
-  background-color: rgb(236, 240, 241);
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
 }
 
-[data-theme=dracula] .worklist-card {
-  background-color: rgb(44, 62, 80);
-  border-color: rgb(127, 140, 141);
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
 }
 
-[data-theme=dracula] .nav-buttons {
-  background-color: rgba(236, 240, 241, 0.1);
-}
-[data-theme=dracula] .nav-buttons .nav-button-text {
-  color: rgb(236, 240, 241);
-}
-[data-theme=dracula] .nav-buttons .nav-button-icon {
-  color: rgb(236, 240, 241);
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
 }
 
-/*# sourceMappingURL=works.css.map */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+  /*
+ * New diff- syntax
+ */
+
+pre[class*='language-diff-'] {
+  --eleventy-code-padding: 1.25em;
+  padding-left: var(--eleventy-code-padding);
+  padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+  background-color: hsl(0, 51%, 37%);
+  color: inherit;
+}
+.token.inserted {
+  background-color: hsl(126, 31%, 39%);
+  color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+  width: var(--eleventy-code-padding);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
+  margin-left: calc(-1 * var(--eleventy-code-padding));
+  margin-right: calc(-1 * var(--eleventy-code-padding));
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+
+  .youtube {
+  width: calc(100vw - 2rem);
+  min-height: calc((100vw - 2rem) / 16 * 9);
+}
+@media screen and (min-width: 768px) {
+  .youtube {
+    width: 33vw;
+    min-height: 18.5625vw;
+  }
+}
+
+/*# sourceMappingURL=youtube.css.map */
+ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+.toc ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+.toc ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.toc ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme=dracula] .toc {
+  background-color: rgb(127, 140, 141);
+}
+
+/*# sourceMappingURL=toc.css.map */
 * {
         box-sizing: border-box;
         padding: 0;
@@ -273,12 +475,15 @@ pre[class*="language-"] {
 
     <div class="p-4 flex flex-col" style="min-height: calc(100vh - 60px)">
       <div class="grow">
-        <header class="w-full lg:w-8/12 m-auto flex-none">
+        <header class="
+  w-full lg:w-9/12
+  m-auto
+  flex-none
+  ">
   <div class="flex flex-row flex-wrap content-center">
     <div class="basis-full lg:basis-1/2">
-
       <div class="
-        mx-4
+        mx-4 lg:mx-0
         flex flex-row items-center gap-7
         ">
 
@@ -385,7 +590,7 @@ pre[class*="language-"] {
 
     <div class="basis-full lg:basis-1/2 items-center flex flex-row justify-start lg:justify-end">
       <nav class="w-full lg:w-fit">
-  <h2 class="visually-hidden">Top navigation menu</h2>
+  <h2 class="visually-hidden" style="display: none">Top navigation menu</h2>
 
   <ul class="
     w-full
@@ -398,6 +603,12 @@ pre[class*="language-"] {
     <li class="text-base font-bold">
       <a href="/portfolio-11ty/en-US/works/">
         Works
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/blog/">
+        Blog
       </a>
     </li>
 
@@ -431,12 +642,12 @@ pre[class*="language-"] {
     <h2 class="visually-hidden">Top level navigation menu</h2>
     <ul class="nav">
         <li class="nav-item">
-          <a href="/portfolio-11ty/en-US/works/">
+          <a href="/portfolio-11ty/en-US/blog/">
             Work
           </a>
         </li>
         <li class="nav-item">
-          <a href="/portfolio-11ty/works/" aria-current="page">
+          <a href="/portfolio-11ty/en-US/works/">
             Work
           </a>
         </li>
@@ -465,232 +676,195 @@ pre[class*="language-"] {
         <main id="skip" class="mt-8 lg:mt-20">
           
 
+<div class="
+  flex flex-col
+  w-full lg:w-9/12 lg:m-auto
+  pt-0 lg:pt-8" style="min-height: calc(100vh - 60px - 100px - 100px)">
 
-<div>
-  <div class="
-    prose max-w-none
-    prose-h1:text-3xl
-    prose-h1:font-bold
-    prose-h1:no-underline
-    prose-a:no-underline
-    prose-h1:my-4
-    prose-img:rounded-xl
-    prose-headings:underline">
-    
- 
-
-<div class="mx-auto w-full lg:w-10/12 flex flex-col lg:flex-row gap-0 lg:gap-4">
-  <div class="w-full lg:w-4/12">
-    <h1>Hi, this is louis</h1>
-    <p>
-      Welcome to demo of hugo’s theme PaperMod.<br>
-      PaperMod is a simple but fast and responsive theme with useful feature-set that enhances UX.<br>
-      Do give a 🌟 on Github !<br>
-      PaperMod is based on theme Paper.<br>
-    </p>
-
-    <p class="hidden lg:block">
-      阪ハウワ応92勤常勉旋72依過らつ。門むば隊就メツヘ突長山テ碁人ゆッ
-      歳両ら止都トカハキ締素ぎぜつ索能経初臣こ党求ぼ担効カタハネ文会ヲツレ端作67神フ測相りち挑坂ぶ。
-      応ハシカ向2捜せぽけリ覧郷ユヤワサ準助7子群メソマ直林無ノヱク総九るね法
-      右み料生レソヱ犯2属スタリチ海新志合のみル。落国がどゅト備初
-    </p>
-
-    <div class="text-3xl flex flex-row flex-wrap gap-4">
-      <a href="//github.com/louiscklaw" target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="//www.linkedin.com/in/louiscklaw" target="_blank">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-      <a href="//t.me/louislabs" target="_blank">
-        <i class="fa-brands fa-telegram"></i>
-      </a>
-      <a href="//louislabs.slack.com/" target="_blank">
-        <i class="fa-brands fa-slack"></i>
-      </a>
-    </div>
-  </div>
-
-  <div class="w-full">
-      <div class="w-full flex flex-row flex-wrap list-none">
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/installation/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
+  <article class="grow">
+    <div class="
+      flex flex-col lg:flex-row
     ">
-    
-      <h2>Installation | Update</h2>
-    
 
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2023-01-23">
-        January 2023
+      
+        <div class="
+            w-full lg:w-9/12
+            break-all
+            prose max-w-none
+            prose-code:bg-slate-200
+            prose-code:rounded
+            prose-h3:font-bold
+            prose-h3:leading-none
+
+            prose-img:my-0
+            prose-img:rounded
+            prose-li:pl-0
+            prose-p:before:content-['']
+            prose-a:no-underline
+            prose-a:hover:underline
+            mx-4 lg:mx-0 lg:pr-8
+            ">
+          <div class="pt-4">
+            <h1 class="m-0 text-2xl lg:text-4xl"> linux toolbox </h1>
+
+          </div>
+          <div class="pt-4">
+            <div class="text-sm flex flex-wrap gap-1 mt-2">
+  <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+    <li>
+      <time datetime="2022-01-01">
+        01 January 2022
       </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
     </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/chinese_test/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
-    
-      <h2>我在淘寶買了BambuLabX1-CarbonCombo</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2023-01-23">
-        January 2023
-      </time>
-      · 3 min · Aditya Telange
-    </div>
+    <li> · 1 min </li>
+    <li> · Louis </li>
+  </ul>
+  <div>|</div>
+  <div>
+    <a href="//github.com/louiscklaw/./content/_common/works/linux-toolbox/index.md" class="font-bold">
+      source
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
+    <a href="." class="font-bold">
+      permalink
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
   </div>
-</a>
 
-    </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/fourthpost/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
+  <div>|</div>
+
+  <div>
+    <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+        <li>
+          <a href="/portfolio-11ty/tags/works/" class="badge flex flex-row gap-1 items-center font-bold">
+            <i class="fa-solid fa-hashtag"></i>works
+          </a>
+        </li>
+    </ul>
     
-      <h2>This is my fourth post.</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2018-09-30">
-        September 2018
-      </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
-    </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/CJKTest/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
-    
-      <h2>待進變果沒致友環健問水法代人苦天。</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2018-09-30">
-        September 2018
-      </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
-    </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/thirdpost/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
-    
-      <h2>This is my third post.</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2018-08-24">
-        August 2018
-      </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
-    </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/secondpost/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
-    
-      <h2>This is my second post with a much longer title.</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2018-07-04">
-        July 2018
-      </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
-    </li>
-  
-    <li class="basis-full lg:basis-1/3 px-0 lg:px-2">
-      <a href="/portfolio-11ty/blog/firstpost/">
-  <div class="
-    worklist-card
-    p-2 lg:p-4
-    border border-slate-150 rounded-xl
-    prose prose-p:mb-0 prose-h2:text-base
-    ">
-    
-      <h2>This is my first post.</h2>
-    
-
-    <p class="mt-4">Read Install and Update instructions here</p>
-    <div>
-      <time datetime="2018-05-01">
-        May 2018
-      </time>
-      · 3 min · Aditya Telange
-    </div>
-  </div>
-</a>
-
-    </li>
-  
-</div>
-
   </div>
 </div>
 
- 
+          </div>
+
+          <div class="pt-12 lg:pt-12 prose-ul:pl-4">
+            
+              <div>
+                <p><picture><source type="image/avif" srcset="/portfolio-11ty/img/Bma7Lb-QtW-1074.avif 1074w"><source type="undefined" srcset="/portfolio-11ty/img/Bma7Lb-QtW-1074.heif 1074w"><img alt="photo of my cat" loading="lazy" decoding="async" src="/portfolio-11ty/img/Bma7Lb-QtW-1074.webp" width="1074" height="806"></picture></p>
+<h2 id="hk-data-search-board" tabindex="-1">hk-data-search-board <a class="header-anchor" href="#hk-data-search-board">#</a></h2>
+<h3 id="purpose" tabindex="-1">Purpose: <a class="header-anchor" href="#purpose">#</a></h3>
+<p>A personal page to help search APIs provided by hk government. Also trying using gatsby.</p>
+<h3 id="demo" tabindex="-1">Demo: <a class="header-anchor" href="#demo">#</a></h3>
+<a href="//hk-data-search-8703a.web.app" class="flex flex-row gap-1 items-center" target="_blank">
+  <span class="underline">https://hk-data-search-8703a.web.app</span>
+  <i class="fa-solid fa-up-right-from-square text-sm"></i>
+</a>
+<h3 id="references-repositories" tabindex="-1">References / Repositories: <a class="header-anchor" href="#references-repositories">#</a></h3>
+<a href="//travis-ci.com/github/louiscklaw/hk-data-search" class="flex flex-row gap-1 items-center" target="_blank">
+  <span class="underline">louiscklaw/hk-data-search</span>
+  <i class="fa-solid fa-up-right-from-square text-sm"></i>
+</a>
+
+              </div>
+            
+          </div>
+        </div>
+
+
+        <div class="
+          w-full lg:basis-3/12
+          order-first
+          md:order-last
+          mx-4
+          ">
+          
+
+
+  <div class="
+    toc
+    sticky
+    top-0
+    rounded-xl
+    p-4
+    " style="cursor: pointer">
+
+    
+    <details class="
+      block lg:hidden
+    ">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#hk-data-search-board">hk-data-search-board #</a>
+            
+                <ol>
+                    
+                    <li><a href="#purpose">Purpose: #</a>
+            		</li>
+
+                    <li><a href="#demo">Demo: #</a>
+            		</li>
+
+                    <li><a href="#references-repositories">References / Repositories: #</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
+
+    
+    <details class="
+      hidden lg:block
+    " open="">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#hk-data-search-board">hk-data-search-board #</a>
+            
+                <ol>
+                    
+                    <li><a href="#purpose">Purpose: #</a>
+            		</li>
+
+                    <li><a href="#demo">Demo: #</a>
+            		</li>
+
+                    <li><a href="#references-repositories">References / Repositories: #</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
 
   </div>
+
+
+        </div>
+
+      
+    </div>
+  </article>
+
+  <div class="my-8"></div>
+
+  
+
+
+  <div class="my-8"></div>
 </div>
 
         </main>

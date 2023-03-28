@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="" dir="" data-theme="emerald">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opencv car counting</title>
+    <meta name="description" content="easy finder for finding the data exposed by gov.hk">
+
+    <link rel="preconnect" href="https://example.com">
+
+    <link rel="alternate" href="/portfolio-11ty/feed/feed.xml" type="application/atom+xml" title="louiscklaw">
+    <link rel="alternate" href="/portfolio-11ty/feed/feed.json" type="application/json" title="louiscklaw">
+
+    
+
+<script src="https://browser.sentry-cdn.com/7.43.0/bundle.tracing.min.js" integrity="sha384-XrtsNPpOZ+ul39uZL5FBdv8ByR9EAoDxyx2pnT9+txkfvq1oqUSD6jWO+Qjj67LD" crossorigin="anonymous"></script>
+
+<script>
+  Sentry.init({
+    dsn: "https://87f86bb1f70549aca9a36d7f63965ff7@o1234273.ingest.sentry.io/4504852838875136",
+    integrations: [new Sentry.BrowserTracing()],
+
+
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production
+    tracesSampleRate: 1.0,
+  });
+
+  myUndefinedFunction();
+
+</script>
+
+
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+</style>
+
+
+    <style>
+      /* Only include the syntax highlighter CSS on blog posts */
+  /**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+  /*
+ * New diff- syntax
+ */
+
+pre[class*='language-diff-'] {
+  --eleventy-code-padding: 1.25em;
+  padding-left: var(--eleventy-code-padding);
+  padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+  background-color: hsl(0, 51%, 37%);
+  color: inherit;
+}
+.token.inserted {
+  background-color: hsl(126, 31%, 39%);
+  color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+  -webkit-user-select: none;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+  width: var(--eleventy-code-padding);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+  display: block;
+  margin-left: calc(-1 * var(--eleventy-code-padding));
+  margin-right: calc(-1 * var(--eleventy-code-padding));
+  text-decoration: none; /* override del, ins, mark defaults */
+  color: inherit; /* override del, ins, mark defaults */
+}
+
+  .youtube {
+  width: calc(100vw - 2rem);
+  min-height: calc((100vw - 2rem) / 16 * 9);
+}
+@media screen and (min-width: 768px) {
+  .youtube {
+    width: 33vw;
+    min-height: 18.5625vw;
+  }
+}
+
+/*# sourceMappingURL=youtube.css.map */
+ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+.toc ol li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 1rem;
+}
+.toc ol li ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.toc ol li ol li {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme=dracula] .toc {
+  background-color: rgb(127, 140, 141);
+}
+
+/*# sourceMappingURL=toc.css.map */
+* {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+      
+
+/*# sourceMappingURL=custom.css.map */
+
+      .tag-card {
+  background-color: rgba(44, 62, 80, 0.1);
+}
+
+[data-theme=dracula] .tag-card {
+  border: solid 1px rgba(236, 240, 241, 0.2);
+  background-color: rgb(44, 62, 80);
+}
+
+/*# sourceMappingURL=cust_theme.css.map */
+
+      .nav-buttons {
+  background-color: rgb(236, 240, 241);
+}
+
+[data-theme=dracula] .nav-buttons {
+  background-color: rgba(236, 240, 241, 0.1);
+}
+[data-theme=dracula] .nav-buttons .nav-button-text {
+  color: rgb(236, 240, 241);
+}
+[data-theme=dracula] .nav-buttons .nav-button-icon {
+  color: rgb(236, 240, 241);
+}
+
+/*# sourceMappingURL=bottom_nav.css.map */
+
+      
+
+/*# sourceMappingURL=helloworld.css.map */
+
+      .palette {
+  color: hsla(var(--bc)/var(--tw-text-opacity, 1));
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity, 1));
+}
+
+[data-theme=dracula] .palette {
+  color: hsla(var(--bc)/var(--tw-text-opacity, 1));
+  background-color: hsla(var(--b1)/var(--tw-bg-opacity, 1));
+}
+
+/*# sourceMappingURL=palette.css.map */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+    </style>
+
+    <meta name="google-site-verification" content="go0904i1ILUz_g0MtA2-eR1Gxco9GfqVbyeTbik344E">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  </head>
+
+  <body class="antialiased">
+    <div class="palette" style="width:0px;height:0px;"></div>
+
+    <div class="p-4 flex flex-col" style="min-height: calc(100vh - 60px)">
+      <div class="grow">
+        <header class="
+  w-full lg:w-9/12
+  m-auto
+  flex-none
+  ">
+  <div class="flex flex-row flex-wrap content-center">
+    <div class="basis-full lg:basis-1/2">
+      <div class="
+        mx-4 lg:mx-0
+        flex flex-row items-center gap-7
+        ">
+
+        <div class="" style="font-size: 24px; font-weight: 700">
+          <a href="/portfolio-11ty/" class="home-link">
+            <h1>louiscklaw</h1>
+          </a>
+        </div>
+
+        <div class="block grow lg:hidden"></div>
+
+        <div class="flex flex-row items-center gap-2">
+          <div id="toggleTheme" style="cursor: pointer">
+  <div id="theme-moon-icon">
+    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </div>
+
+
+  <div id="theme-sun-icon">
+    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </div>
+</div>
+
+<script>
+  let curr_theme = localStorage.getItem('curr_theme') || "light";
+
+  function changeThemeLight(){
+    console.log('changeThemeLight')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'emerald';
+
+    document.querySelector('#theme-sun-icon').style.display="none"
+    document.querySelector('#theme-moon-icon').style.display="block"
+  }
+
+  function changeThemeDark(){
+    console.log('changeThemeDark')
+    const html = document.querySelector("html");
+    html.dataset.theme = 'dracula';
+
+    document.querySelector('#theme-sun-icon').style.display="block"
+    document.querySelector('#theme-moon-icon').style.display="none"
+  }
+
+  function toggleTheme(){
+    if (curr_theme == 'light'){
+      curr_theme="dark"
+      changeThemeDark()
+    }else{
+      curr_theme="light"
+      changeThemeLight()
+    }
+    console.log('save toggle theme')
+    localStorage.setItem('curr_theme', curr_theme);
+
+  }
+
+  const button = document.querySelector("#toggleTheme");
+  button.addEventListener("click", toggleTheme);
+
+  
+  if (curr_theme == 'dark'){
+    changeThemeDark()
+  }else{
+    changeThemeLight()
+  }
+
+</script>
+
+          <div class="hidden text-bases">
+  <div class="border border-l-indigo-500 text-base h-[2rem]"></div>
+</div>
+
+<div class="hidden text-bases">
+  
+  <ul class="flex flex-row justify-center items-center gap-1">
+    <li>
+      <a href="/portfolio-11ty/en-US/" title="english" aria-label=":us:">
+        <i class="fa-solid fa-language"></i>
+        <span>US</span>
+      </a>
+    </li>
+  </ul>
+  
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="basis-full lg:basis-1/2 items-center flex flex-row justify-start lg:justify-end">
+      <nav class="w-full lg:w-fit">
+  <h2 class="visually-hidden" style="display: none">Top navigation menu</h2>
+
+  <ul class="
+    w-full
+    flex flex-row flex-wrap
+    gap-12 lg:gap-6
+    justify-center lg:justify-end
+    pt-8 lg:pt-0
+    ">
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/works/">
+        Works
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/blog/">
+        Blog
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/search/">
+        Search
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="/portfolio-11ty/en-US/tags/">
+        Tags
+      </a>
+    </li>
+
+    <li class="text-base font-bold">
+      <a href="//share.louislabs.com/upload">
+        Upload
+      </a>
+    </li>
+
+    
+  </ul>
+</nav>
+
+    </div>
+  </div>
+
+  <div style="display: none">
+  <nav>
+    <h2 class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+        <li class="nav-item">
+          <a href="/portfolio-11ty/en-US/blog/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/en-US/works/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/zh-HK/works/">
+            Work
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/blog/">
+            Archive
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/portfolio-11ty/about/">
+            About Me
+          </a>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+</header>
+
+
+        <main id="skip" class="mt-8 lg:mt-20">
+          
+
+<div class="
+  flex flex-col
+  w-full lg:w-9/12 lg:m-auto
+  pt-0 lg:pt-8" style="min-height: calc(100vh - 60px - 100px - 100px)">
+
+  <article class="grow">
+    <div class="
+      flex flex-col lg:flex-row
+    ">
+
+      
+        <div class="
+            w-full lg:w-9/12
+            break-all
+            prose max-w-none
+            prose-code:bg-slate-200
+            prose-code:rounded
+            prose-h3:font-bold
+            prose-h3:leading-none
+
+            prose-img:my-0
+            prose-img:rounded
+            prose-li:pl-0
+            prose-p:before:content-['']
+            prose-a:no-underline
+            prose-a:hover:underline
+            mx-4 lg:mx-0 lg:pr-8
+            ">
+          <div class="pt-4">
+            <h1 class="m-0 text-2xl lg:text-4xl"> opencv car counting </h1>
+
+          </div>
+          <div class="pt-4">
+            <div class="text-sm flex flex-wrap gap-1 mt-2">
+  <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+    <li>
+      <time datetime="2022-01-01">
+        01 January 2022
+      </time>
+    </li>
+    <li> · 1 min </li>
+    <li> · Louis </li>
+  </ul>
+  <div>|</div>
+  <div>
+    <a href="//github.com/louiscklaw/./content/_common/works/printer-board-tryout/index.md" class="font-bold">
+      source
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
+    <a href="." class="font-bold">
+      permalink
+      <i class="text-xs fa-solid fa-link"></i>
+    </a>
+  </div>
+
+  <div>|</div>
+
+  <div>
+    <ul class="m-0 list-inside list-none flex flex-wrap not-prose pl-0 gap-1">
+        <li>
+          <a href="/portfolio-11ty/tags/works/" class="badge flex flex-row gap-1 items-center font-bold">
+            <i class="fa-solid fa-hashtag"></i>works
+          </a>
+        </li>
+    </ul>
+    
+  </div>
+</div>
+
+          </div>
+
+          <div class="pt-12 lg:pt-12 prose-ul:pl-4">
+            
+              <div>
+                <p><picture><source type="image/avif" srcset="/portfolio-11ty/img/KxLOJQ-OZc-431.avif 431w"><source type="image/webp" srcset="/portfolio-11ty/img/KxLOJQ-OZc-431.webp 431w"><img alt="photo of my cat" loading="lazy" decoding="async" src="/portfolio-11ty/img/KxLOJQ-OZc-431.png" width="431" height="400"></picture></p>
+<h2 id="opencv-car-counting" tabindex="-1">opencv car counting <a class="header-anchor" href="#opencv-car-counting">#</a></h2>
+<h3 id="purpose" tabindex="-1">Purpose: <a class="header-anchor" href="#purpose">#</a></h3>
+<p>To count the number of cars passing by images only.
+This project is craeted on top of the another github works work.</p>
+<h3 id="technology-stack" tabindex="-1">Technology / Stack: <a class="header-anchor" href="#technology-stack">#</a></h3>
+<ul>
+<li>python</li>
+<li>docker</li>
+<li>linux</li>
+</ul>
+<h3 id="references-repositories" tabindex="-1">References / Repositories: <a class="header-anchor" href="#references-repositories">#</a></h3>
+<a href="//github.com/louiscklaw/car_tracking_tryout" class="flex flex-row gap-1 items-center" target="_blank">
+  <span class="underline">github.com/louiscklaw/car_tracking_tryout</span>
+  <i class="fa-solid fa-up-right-from-square text-sm"></i>
+</a>
+
+              </div>
+            
+          </div>
+        </div>
+
+
+        <div class="
+          w-full lg:basis-3/12
+          order-first
+          md:order-last
+          mx-4
+          ">
+          
+
+
+  <div class="
+    toc
+    sticky
+    top-0
+    rounded-xl
+    p-4
+    " style="cursor: pointer">
+
+    
+    <details class="
+      block lg:hidden
+    ">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#opencv-car-counting">opencv car counting #</a>
+            
+                <ol>
+                    
+                    <li><a href="#purpose">Purpose: #</a>
+            		</li>
+
+                    <li><a href="#technology-stack">Technology / Stack: #</a>
+            		</li>
+
+                    <li><a href="#references-repositories">References / Repositories: #</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
+
+    
+    <details class="
+      hidden lg:block
+    " open="">
+      <summary accesskey="c" title="(Alt + C)">
+        <span class="details text-lg font-bold">Table of Contents</span>
+      </summary>
+
+      <div class="inner pt-4">
+        <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#opencv-car-counting">opencv car counting #</a>
+            
+                <ol>
+                    
+                    <li><a href="#purpose">Purpose: #</a>
+            		</li>
+
+                    <li><a href="#technology-stack">Technology / Stack: #</a>
+            		</li>
+
+                    <li><a href="#references-repositories">References / Repositories: #</a>
+            		</li>
+                </ol>
+            		</li>
+                </ol>
+            </nav>
+      </div>
+    </details>
+
+  </div>
+
+
+        </div>
+
+      
+    </div>
+  </article>
+
+  <div class="my-8"></div>
+
+  
+
+
+  <div class="my-8"></div>
+</div>
+
+        </main>
+
+      </div>
+
+      <footer>
+  <div class="
+    py-12 lg:p-4
+    prose max-w-none
+    text-xs
+    flex flex-row justify-center items-center
+    ">
+    <div class="flex flex-col items-center gap-2">
+
+      <a href="//louiscklaw.github.io" class="flex flex-row items-center gap-1">
+        <i class="fa-regular fa-copyright"></i>
+        <div class="underline">2023 louis portfolio</div>
+      </a>
+
+      <div>
+        building on top of <a href="//github.com/adityatelange/hugo-PaperMod" target="_blank">
+          Hugo papermod
+        </a>
+      </div>
+      <div>
+        <a href="https://github.com/louiscklaw/portfolio-11ty">
+          <i class="fa-brands fa-github"></i><span class="pl-1">source</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </body>
+</html>
