@@ -3,6 +3,7 @@
 
 $ scripts/start_dev.sh
 $ npm run into_docker
+
 # inside docker
 $ npm run start
 
